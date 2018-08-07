@@ -1,5 +1,6 @@
-pidgin-sipe (1.23.2-1+20180315164425~debian) UNRELEASED; urgency=medium
+pidgin-sipe (1.23.2-1+20180315164425~0.1) UNRELEASED; urgency=medium
 
+  [ Jakub Adam ]
   * New upstream release.
         - Fixed #338: Incorrect port 0 for IPv6 socket on Windows
         - Fixed #337: Duplicate candidates in SDP
@@ -16,7 +17,10 @@ pidgin-sipe (1.23.2-1+20180315164425~debian) UNRELEASED; urgency=medium
         - installs x264enc GStreamer plugin.
   * Auto build.
 
- -- Jakub Adam <jakub.adam@ktknet.cz>  Thu, 15 Mar 2018 17:44:25 +0100
+  [ Martin Di-Rollo ]
+  * Debian build rules: override dh_autoreconf which would get called twice and fail the build 
+
+ -- Martin Di-Rollo <martin.di-rollo@edf.fr>  Tue, 07 Aug 2018 10:50:18 +0200
 
 pidgin-sipe (1.23.0-3) unstable; urgency=medium
 
