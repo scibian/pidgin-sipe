@@ -1,4 +1,4 @@
-pidgin-sipe (1.23.2-1+20180315164425~0.1) UNRELEASED; urgency=medium
+pidgin-sipe (1.23.2-2+20180315164425) scibian9; urgency=medium
 
   [ Jakub Adam ]
   * New upstream release.
@@ -20,7 +20,7 @@ pidgin-sipe (1.23.2-1+20180315164425~0.1) UNRELEASED; urgency=medium
   [ Martin Di-Rollo ]
   * Debian build rules: override dh_autoreconf which would get called twice and fail the build 
 
- -- Martin Di-Rollo <martin.di-rollo@edf.fr>  Tue, 07 Aug 2018 10:50:18 +0200
+ -- Martin Di-Rollo <martin.di-rollo@edf.fr>  Tue, 07 Aug 2018 11:42:06 +0200
 
 pidgin-sipe (1.23.0-3) unstable; urgency=medium
 
