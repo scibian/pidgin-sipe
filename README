@@ -1,0 +1,306 @@
+Introduction
+============
+
+SIPE is a third-party plugin for the Pidgin/Adium/Miranda/Telepathy
+multi-protocol instant messaging clients/frameworks. It implements the
+extended version of SIP/SIMPLE used by various products:
+
+    * Skype for Business
+    * Microsoft Office 365
+    * Microsoft Business Productivity Online Suite (BPOS)
+    * Microsoft Lync Server
+    * Microsoft Office Communications Server (OCS 2007/2007 R2)
+    * Microsoft Live Communications Server (LCS 2003/2005)
+
+With this plugin you should be able to replace your Microsoft Office
+Communicator client with Pidgin/Adium/Miranda/Telepathy.
+
+
+Features
+========
+
+The plugin has support for
+
+    * Instant Messaging (IM)
+    * Multiparty chat (OCS 2005) or conference (OCS 2007+)
+    * Group chat (Lync 2010) or Persistent chat (Lync 2013) - [MS-XCCOSIP]
+    * Enhanced presence
+    * Calendar integration with Exchange 2007+ (can be disabled)
+    * Contact details information - company, phones, photo, web site, etc.
+    * Unified Contact Store (Lync 2013) - [MS-OXWSCOS]
+    * Contact search - [MS-PRES] and [MS-DLX] methods supported
+    * Encrypted file transfer (OCS2007: send & receive, Lync: receive only)
+    * Voice & Video calls
+    * Call initiation through PBX
+    * NTLMv2, Kerberos & TLS-DSK authentication methods
+    * Single Sign-On (depends on OS and authentication method)
+    * Automatic SSL/TLS protection for SIP/HTTP connections
+    * Crypto implementation using NSS or OpenSSL
+    * Localization
+
+The plugin has backends for
+
+    * Pidgin/Finch (libpurple)
+    * Adium (libpurple)
+    * Miranda
+    * Telepathy (under development)
+
+
+Advantages over Office Communicator products
+============================================
+
+    * Available on broader range of platforms: Linux, *BSD, Maemo, OSX,
+      commercial UNIX, Windows.
+    * Ability to simultaneously connect to several Office Communicator
+      accounts in addition to public IM network accounts like MSN, AOL,
+      Yahoo. For example one account is in vendor company and another is
+      in client company.
+    * Keeps history of communications in environments without Outlook. For
+      example in companies where Lotus Notes is deployed as a default
+      groupware client instead of Outlook.
+    * Lotus Notes/Domino calendar integration. Unique to SIPE.
+    * Open development model, open source product. License is GPLv2+
+
+
+Support
+=======
+
+The Pidgin or Adium projects do not support third-party plugins! Please do
+not ask questions about SIPE in their forums or report SIPE problems to their
+bug trackers.
+
+If you set up your Office Communicator/Lync account with SIPE for the first
+time then please make sure to read this page:
+
+    https://sourceforge.net/p/sipe/wiki/How%20to%20setup%20an%20account/
+
+If you encounter problems then please make sure to check out the Frequently
+Asked Question page:
+
+    https://sourceforge.net/p/sipe/wiki/faq/
+
+If you still have problems then please check the support forum if another
+user encountered the same problem and maybe solved it already:
+
+    http://sourceforge.net/p/sipe/discussion/
+
+If you think that you have found a bug in SIPE then please report it to the
+SIPE bug tracker:
+
+    https://sourceforge.net/p/sipe/bugs/
+
+The SIPE project kindly requests that you do not ignore the instructions that
+appear at the head of the "Create Ticket" page. These instructions are there
+for a reason and if you ignore them then you will only cause unnecessary work
+for the project and yourself. Please do not report missing features as bugs.
+
+New or missing features can be requested here:
+
+    https://sourceforge.net/p/sipe/feature-requests/
+
+
+Localization
+============
+
+SIPE has already been localized for several languages. You can help to
+translate SIPE to your native language at Transifex:
+
+    https://www.transifex.com/stefanb/pidgin-sipe/
+
+The service offers a convenient web editor.
+
+
+D-Bus support (libpurple backend only)
+======================================
+
+If libpurple and SIPE have been compiled with D-Bus support and the D-Bus
+backend has been successfully initialized at libpurple start, then SIPE
+extends the libpurple D-Bus interface with the following APIs:
+
+    Function		  Description
+
+    SipeCallPhoneNumber(aId, phone_number)
+			  Same as "Call a phone number" menu
+
+    SipeJoinConferenceWithOrganizerAndId(aId, organizer_email, meeting_id)
+			  Same as "Organizer email" and "Meeting ID" in the
+			  dialog opened by "Join scheduled conference..."
+
+    SipeJoinConferenceWithUri(aId, uri)
+			  Same as "Meeting location" in the dialog opened by
+			  "Join scheduled conference..."
+
+    SipeRepublishCalendar(aId)
+			  Same as "Republish Calendar" menu
+
+    SipeResetStatus(aId)
+			  Same as "Reset status" menu
+
+To use the APIs from a script you'll need a D-Bus object for the libpurple
+interface and a valid & connected account ID as first parameter. An invalid
+account ID will cause SIPE to silently ignore the D-Bus invocation.
+
+Example script code (without error checks to keep it simple):
+
+Perl:
+
+    use Net::DBus;
+    my $bus       = Net::DBus->session;
+    my $service   = $bus->get_service('im.pidgin.purple.PurpleService');
+    my $purple    = $service->get_object('/im/pidgin/purple/PurpleObject',
+                                         'im.pidgin.purple.PurpleInterface');
+    my $accountId = $purple->PurpleAccountsFind($accountName, 'prpl-sipe');
+    $purple->SipeXYZ($accountId, parameters... );
+
+Python:
+
+    import dbus
+    bus       = dbus.SessionBus()
+    object    = bus.get_object("im.pidgin.purple.PurpleService",
+                               "/im/pidgin/purple/PurpleObject")
+    purple    = dbus.Interface(object, "im.pidgin.purple.PurpleInterface")
+    accountId = purple.PurpleAccountsFind($accountName, 'prpl-sipe')
+    purple.SipeXYZ(accountId, parameters... );
+
+
+Installing from a distribution repository
+=========================================
+
+Many Open Source OS distributions have a ready-made package "pidgin-sipe".
+Before trying to compile it from the source code yourself you should try
+to install this package with the standard installation method provided by
+your OS.
+
+Once you have SIPE installed and are connected to your account you can check
+from the following Pidgin menu
+
+	Accounts -> <SIPE Account> -> About SIPE plugin...
+
+which optional features have been enabled in your SIPE build.
+
+
+Do It Yourself I: compiling against "pidgin" package
+====================================================
+
+NOTE: for instructions how to setup a build environment on Windows to
+      compile the Windows Pidgin plugin, please read:
+
+	https://developer.pidgin.im/wiki/BuildingWinPidgin
+
+NOTE: for instructions how to cross-compile the Windows Pidgin plugin on
+      Linux, please read:
+
+	contrib/mingw-cross-compile/README.txt
+
+NOTE: for instructions how to compile the SIPEAdiumPlugin on Mac OS X,
+      please read:
+
+	src/adium/README.adium
+
+
+If you already have installed the "pidgin" package from your distribution
+repository and want compile SIPE from source code yourself, then you need to
+install the necessary headers first. Depending on your distribution you'll
+need to install one of the following packages
+
+	libpurple-dev
+	libpurple-devel
+
+For the compilation you'll need to install a C compiler and some of the
+following packages
+
+	libtool
+	intltool
+
+	pkg-config
+	libglib2.0-dev
+	libxml2-dev
+	libgmime-2.4-dev  (optional)
+	libgmime-2.6-dev  (optional)
+
+	pkgconfig
+	libglib2-devel
+	libxml2-devel
+	gettext-devel
+	gmime-devel       (optional)
+
+You have to choose between NSS or OpenSSL for the crypto backend. You'll
+need one of the following packages
+
+	for NSS:
+	libnss3-dev
+	nss-devel
+	mozilla-nss-devel
+
+	for OpenSSL:
+	libssl-dev
+	openssl-devel
+
+If you want to enable Kerberos authentication support then you'll need one
+of the following packages
+
+	libkrb5-dev
+	krb5-devel
+
+If you additionally want to disable the internal NTLM implementation and
+authenticate with NTLM via GSSAPI then you'll need one of the following
+packages
+
+	gssntlmssp-devel
+
+If you want to enable the D-Bus support then you'll need one of the
+following packages
+
+	libdbus-1-dev
+	dbus-devel
+
+If you want to enable Voice & Video features then you'll need some of the
+following packages. You need to install the same version of the GStreamer
+development packages which where used to compile Pidgin!
+
+	libfarstream-0.2-dev
+	libgstreamer1.0-dev
+	libgstreamer-plugins-base1.0-dev
+	libnice-dev                   (>= 0.1.13)
+	libpurple-dev                 (>= 2.10.12)
+
+	farstream02-devel
+	gstreamer1-devel
+	gstreamer1-plugins-base-devel
+	libnice-devel                 (>= 0.1.13)
+	libpurple-devel               (>= 2.10.12)
+
+Now you should be able to compile the source code with
+
+	./configure --prefix=/usr
+	make
+
+If you get errors then you are missing some required package. After
+successful compilation you can install SIPE with:
+
+	su -c "make install"
+
+If you get errors from configure or libtool about version conflicts then
+you need to regenerate the autoconf files. You'll need these additional
+packages
+
+	autoconf
+	automake
+
+Now you should be able to regenerate the files with
+
+	autoreconf --verbose --install --force
+
+After that go back to the configure step above.
+
+
+Do It Yourself II: compiling against self-compiled pidgin
+=========================================================
+
+If you have compiled pidgin from source code yourself then you'll have to
+specify the correct installation path in configure. Usually pidgin is
+installed in /usr/local so the following command should work
+
+	./configure --prefix=/usr/local
+
+The rest of the steps are the same as in the previous section.

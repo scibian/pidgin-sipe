@@ -1,0 +1,21 @@
+Bugs:
+
+Big Targets:
+	- Native telepahty backend
+	- Desktop sharing/Live Meeting integration on Windows platform.
+	- Update projects site with
+	  * SIPE features
+          * better/more complete screenshots
+	  * page about standards used in SIPE with references
+
+Call Control:
+	- change user state to On Call when line is active and then back
+	- answer incoming call (logs required)
+	- (?) work with multiple phone lines (not the first one)
+	- (?) Call transfer set up, other RCC features from Communicator.
+
+Group Chat:
+        - channel management: add, delete
+        - (?) lock/unlock channel (is this possible?)
+        - file sharing: up & downloading from web server
+        - ??? (unknown as we don't have XCCOS protocol specification)

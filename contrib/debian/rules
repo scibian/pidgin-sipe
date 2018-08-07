@@ -1,0 +1,45 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+HAVE_APPSTREAM        := $(strip $(shell (/usr/bin/appstream-validate >/dev/null --version || /usr/bin/appstreamcli >/dev/null --version) && echo yes))
+HAVE_APPSTREAM_LEGACY := $(strip $(shell . /etc/os-release; echo $${ID}-$${VERSION_ID} | grep -q '^debian-8$$' && echo yes))
+
+DEB_CONFIGURE_EXTRA_FLAGS := --enable-purple
+# detect if package telepathy-glib is available
+ifneq ($(shell pkg-config --exists telepathy-glib && echo FOUND),)
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-telepathy
+else
+DEB_CONFIGURE_EXTRA_FLAGS += --disable-telepathy
+endif
+ifeq ($(HAVE_APPSTREAM),)
+DEB_CONFIGURE_EXTRA_FLAGS += --without-appstream
+endif
+
+# run tests
+DEB_MAKE_CHECK_TARGET := check
+
+# don't run unnecessary ldconfig on postinst and postrm.
+DEB_DH_MAKESHLIBS_ARGS_pidgin-sipe=-n
+
+clean::
+	dh_testdir
+
+# git snapshot does not contain a configure script
+debian/stamp-autotools-files: $(DEB_CONFIGURE_SCRIPT)
+$(DEB_BUILDDIR)/config.status: $(DEB_CONFIGURE_SCRIPT)
+
+$(DEB_CONFIGURE_SCRIPT):
+	./autogen.sh
+
+binary-post-install/pidgin-sipe::
+	rm -f debian/pidgin-sipe/usr/share/doc/pidgin-sipe/README
+	rm -r debian/pidgin-sipe/usr/share/pixmaps/pidgin/protocols/24
+	rm -r debian/pidgin-sipe/usr/share/pixmaps/pidgin/protocols/32
+	rm debian/pidgin-sipe/usr/lib/purple-2/libsipe.la
+ifeq ($(HAVE_APPSTREAM)-$(HAVE_APPSTREAM_LEGACY),yes-yes)
+	mv debian/pidgin-sipe/usr/share/metainfo debian/pidgin-sipe/usr/share/appdata
+endif
+
+.PHONY: update-debian-control

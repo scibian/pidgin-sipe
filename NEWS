@@ -1,0 +1,2 @@
+version 1.23.2 "Bug Fixes II" (2018-03-10)
+	- fix some HTTP requests that were not sent (Jakub Adam, Stefan Becker)

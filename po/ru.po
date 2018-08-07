@@ -1,0 +1,1295 @@
+# (English) English User Interface strings for pidgin-sipe.
+# Copyright (C) 2008-2011 SIPE Project <http://sipe.sourceforge.net/>
+# This file is distributed under the same license as the pidgin-sipe package.
+# 
+# 
+# 
+# Translators:
+# Amber <amber.really@gmail.com>, 2011
+# Ivan Gromov <summer.is.gone@gmail.com>, 2016
+# someone328 <someone328@gmail.com>, 2011
+# Stefan Becker <chemobejk@gmail.com>, 2011
+# Ivan Gromov <summer.is.gone@gmail.com>, 2015
+# G0LDEN_key <the.golden.key@gmail.com>, 2013,2015
+# Дмитрий Д. <dalinger4life@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: pidgin sipe\n"
+"Report-Msgid-Bugs-To: https://sourceforge.net/p/sipe/bugs/\n"
+"POT-Creation-Date: 2010-11-30 23:36+0200\n"
+"PO-Revision-Date: 2017-10-09 16:38+0000\n"
+"Last-Translator: Stefan Becker <chemobejk@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/stefanb/pidgin-sipe/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../src/core/sip-transport.c:244
+msgid "Failed to authenticate to server"
+msgstr "Не удалось проверить подлинность сервера"
+
+#: ../src/core/sip-transport.c:302
+#, c-format
+msgid "Can't request certificate from %s"
+msgstr "Невозможно запросить сертификат от %s"
+
+#: ../src/core/sip-transport.c:312
+msgid "No URI for certificate provisioning service provided"
+msgstr "Нет URI для сертификата"
+
+#: ../src/core/sip-transport.c:1300
+msgid "Authentication failed"
+msgstr "Ошибка аутентификации"
+
+#: ../src/core/sip-transport.c:1357
+msgid "Incompatible authentication scheme chosen"
+msgstr "Выбрана несовместимая схема проверки подлинности пользователя"
+
+#: ../src/core/sip-transport.c:1374 ../src/core/sipe-notify.c:1159
+#, c-format
+msgid "You have been rejected by the server: %s"
+msgstr "Вы были отклонены сервером: %s"
+
+#: ../src/core/sip-transport.c:1375 ../src/core/sip-transport.c:1391
+#: ../src/core/sip-transport.c:1415 ../src/core/sip-transport.c:1439
+#: ../src/core/sipe-conf.c:265 ../src/core/sipe-notify.c:1159
+msgid "no reason given"
+msgstr "причина не указана"
+
+#: ../src/core/sip-transport.c:1390
+#, c-format
+msgid "Not found: %s. Please contact your Administrator"
+msgstr "Не найден: %s. Пожалуйста, обратитесь к администратору"
+
+#: ../src/core/sip-transport.c:1392
+msgid "SIP is either not enabled for the destination URI or it does not exist"
+msgstr "SIP-адрес либо не включен для URI назначения либо не существует"
+
+#: ../src/core/sip-transport.c:1415 ../src/core/sip-transport.c:1439
+#, c-format
+msgid "Service unavailable: %s"
+msgstr "Сервис недоступен: %s"
+
+#: ../src/core/sip-transport.c:1791
+msgid "Corrupted message received"
+msgstr "Получено искажённое сообщение"
+
+#: ../src/core/sip-transport.c:1815
+msgid "Invalid message signature received"
+msgstr "Получена недопустимая подпись сообщения"
+
+#: ../src/core/sipe-appshare.c:458
+#, c-format
+msgid "%s wants to start presenting"
+msgstr "%s желает начать презентацию"
+
+#: ../src/core/sipe-appshare.c:462 ../src/core/sipe-conf.c:1092
+msgid "Accept"
+msgstr "Принять"
+
+#: ../src/core/sipe-appshare.c:463 ../src/core/sipe-conf.c:1093
+msgid "Decline"
+msgstr "Отклонить"
+
+#: ../src/core/sipe-appshare.c:501 ../src/core/sipe-appshare.c:599
+msgid "Application sharing error"
+msgstr ""
+
+#: ../src/core/sipe-appshare.c:502
+msgid "Unknown remote desktop client configured."
+msgstr ""
+
+#: ../src/core/sipe-appshare.c:600
+msgid "Couldn't connect application sharing"
+msgstr ""
+
+#: ../src/core/sipe-buddy.c:541 ../src/core/sipe-buddy.c:2332
+msgid "Mobile"
+msgstr "Мобильный"
+
+#: ../src/core/sipe-buddy.c:829
+msgid "Status"
+msgstr "Состояние"
+
+#: ../src/core/sipe-buddy.c:832
+msgid "Calendar"
+msgstr "Календарь"
+
+#: ../src/core/sipe-buddy.c:837
+msgid "Meeting in"
+msgstr "Место собрания"
+
+#: ../src/core/sipe-buddy.c:841
+msgid "Meeting about"
+msgstr "Тема собрания"
+
+#: ../src/core/sipe-buddy.c:846
+msgid "Out of office note"
+msgstr "Сообщение \"Нет на работе\""
+
+#: ../src/core/sipe-buddy.c:846
+msgid "Note"
+msgstr "Личное сообщение"
+
+#: ../src/core/sipe-buddy.c:851 ../src/core/sipe-buddy.c:2377
+#: ../src/purple/purple-buddy.c:633
+msgid "Access level"
+msgstr "Уровень доступа"
+
+#: ../src/core/sipe-buddy.c:1074
+#, c-format
+msgid "Found %d contact%s:"
+msgid_plural "Found %d contacts%s:"
+msgstr[0] "Найден %d один контакт %s :"
+msgstr[1] "Найдено несколько %d контактов %s :"
+msgstr[2] "Найдены %d другие контакты %s :"
+msgstr[3] "Найдены %d другие контакты %s :"
+
+#: ../src/core/sipe-buddy.c:1076
+msgid " (more matched your query)"
+msgstr " (большее соответствие вашему запросу)"
+
+#: ../src/core/sipe-buddy.c:1122 ../src/core/sipe-buddy.c:1260
+#: ../src/core/sipe-ucs.c:314
+msgid "No contacts found"
+msgstr "Контакты не найдены"
+
+#: ../src/core/sipe-buddy.c:1135 ../src/core/sipe-buddy.c:1273
+#: ../src/core/sipe-ucs.c:278
+msgid "Unable to display the search results"
+msgstr "Не удается отобразить результаты поиска"
+
+#: ../src/core/sipe-buddy.c:1238 ../src/core/sipe-buddy.c:1250
+#: ../src/core/sipe-ucs.c:391
+msgid "Contact search failed"
+msgstr "Поиск контактов неудачен"
+
+#: ../src/core/sipe-buddy.c:1413 ../src/core/sipe-ucs.c:395
+msgid "Invalid contact search query"
+msgstr "Неверный запрос поиска контакта"
+
+#: ../src/core/sipe-buddy.c:2269
+#, c-format
+msgid "Make leader of '%s'"
+msgstr "Сделать ведущим '%s'"
+
+#: ../src/core/sipe-buddy.c:2282
+#, c-format
+msgid "Remove from '%s'"
+msgstr "Удалить из '%s'"
+
+#: ../src/core/sipe-buddy.c:2296
+#, c-format
+msgid "Invite to '%s'"
+msgstr "Пригласить в '%s'"
+
+#: ../src/core/sipe-buddy.c:2312
+msgid "New chat"
+msgstr "Новый чат"
+
+#: ../src/core/sipe-buddy.c:2325
+msgid "Work"
+msgstr "Рабочий"
+
+#: ../src/core/sipe-buddy.c:2340
+msgid "Home"
+msgstr "Домашняя страница"
+
+#: ../src/core/sipe-buddy.c:2348
+msgid "Other"
+msgstr "Другой"
+
+#: ../src/core/sipe-buddy.c:2356
+msgid "Custom1"
+msgstr "Свой тип"
+
+#: ../src/core/sipe-buddy.c:2366
+msgid "Send email..."
+msgstr "Отправить сообщение электронной почты..."
+
+#: ../src/core/sipe-cal.c:906
+msgid "Free"
+msgstr "Свободен"
+
+#: ../src/core/sipe-cal.c:907
+msgid "Tentative"
+msgstr "Под вопросом"
+
+#. SIPE_ACTIVITY_BUSY
+#: ../src/core/sipe-cal.c:908 ../src/core/sipe-status.c:57
+msgid "Busy"
+msgstr "Занят"
+
+#. SIPE_ACTIVITY_OOF
+#: ../src/core/sipe-cal.c:909 ../src/core/sipe-status.c:68
+msgid "Out of office"
+msgstr "Нет на месте"
+
+#: ../src/core/sipe-cal.c:910
+msgid "No data"
+msgstr "Нет данных"
+
+#: ../src/core/sipe-cal.c:1018 ../src/core/sipe-cal.c:1045
+#, c-format
+msgid "Currently %s"
+msgstr "в настоящий момент %s"
+
+#: ../src/core/sipe-cal.c:1024
+msgid "Outside of working hours for next 8 hours"
+msgstr "Нерабочее время в течение следующих 8 часов"
+
+#: ../src/core/sipe-cal.c:1026
+#, c-format
+msgid "%s for next 8 hours"
+msgstr "%s в течение следующих 8 часов"
+
+#: ../src/core/sipe-cal.c:1035
+msgid "Not working"
+msgstr "не работаю"
+
+#: ../src/core/sipe-cal.c:1039
+#, c-format
+msgid "%s until %.2d:%.2d"
+msgstr "%s до %.2d:%.2d"
+
+#: ../src/core/sipe-cal.c:1047
+#, c-format
+msgid "%s. Outside of working hours at %.2d:%.2d"
+msgstr "%s. Нерабочее время в %.2d:%.2d"
+
+#: ../src/core/sipe-cal.c:1052
+#, c-format
+msgid "%s. %s at %.2d:%.2d"
+msgstr "%s. %s в %.2d:%.2d"
+
+#: ../src/core/sipe-certificate.c:233 ../src/core/sipe-certificate.c:277
+#, c-format
+msgid "Certificate request to %s failed"
+msgstr "Не удалось запросить сертификат %s"
+
+#: ../src/core/sipe-certificate.c:284
+#, c-format
+msgid "Web ticket request to %s failed"
+msgstr "Не удачный запрос вебтикета %s "
+
+#. Generate next ID
+#: ../src/core/sipe-chat.c:251
+#, c-format
+msgid "Chat #%d"
+msgstr "Чат #%d"
+
+#: ../src/core/sipe-conf.c:264 ../src/core/sipe-conf.c:418
+#: ../src/core/sipe-conf.c:452 ../src/core/sipe-conf.c:504
+msgid "Failed to join the conference"
+msgstr "Не удалось присоединиться к конференции"
+
+#: ../src/core/sipe-conf.c:414
+#, c-format
+msgid ""
+"Can't find a conference URI on this page:\n"
+"\n"
+"%s"
+msgstr "URL aдрес конференции отсутствует на этой странице:\n\n%s"
+
+#: ../src/core/sipe-conf.c:449
+#, c-format
+msgid "\"%s\" is not a valid conference URI"
+msgstr "\"%s\" не верный URI конференции"
+
+#: ../src/core/sipe-conf.c:505
+msgid "Incomplete conference information provided"
+msgstr "Предоставлена неполная информация о конференции"
+
+#: ../src/core/sipe-conf.c:1112
+msgid ""
+"\n"
+"\n"
+"As this client was not compiled with voice call support, if you accept, you will be able to contact the other participants only via IM session."
+msgstr "\n\nДанное приложение не поддерживает голосовых звонков, если вы согласитесь, вы будете иметь возможность связаться с другими участниками только через сеанс обмена мгновенными сообщениями."
+
+#: ../src/core/sipe-conf.c:1117
+#, c-format
+msgid "wants to invite you to a conference call%s"
+msgstr "хочет пригласить вас на конференцию %s"
+
+#: ../src/core/sipe-conf.c:1465
+msgid ""
+"This conference is no longer locked. Additional participants can now join."
+msgstr "Конференция разблокирована. Новые участники могут присоединиться."
+
+#: ../src/core/sipe-conf.c:1469
+msgid ""
+"This conference is locked. Nobody else can join the conference while it is "
+"locked."
+msgstr "Конференция заблокирована. Пока доступ к конференции заблокирован, к ней не могут присоединяться новые участники."
+
+#: ../src/core/sipe-conf.c:1502
+msgid "You have been disconnected from this conference."
+msgstr "Ведущий конференции удалил вас из конференции."
+
+#: ../src/core/sipe-conf.c:1662
+msgid "Dial-in info"
+msgstr "Информация о подключении по телефону"
+
+#: ../src/core/sipe-conf.c:1663
+msgid "Number"
+msgstr "Номер"
+
+#: ../src/core/sipe-conf.c:1665
+msgid "Conference ID"
+msgstr "Идентификатор конференции"
+
+#: ../src/core/sipe-conf.c:1667
+msgid "Meeting link"
+msgstr "Сылка на собрание"
+
+#: ../src/core/sipe-conf.c:1669
+msgid "Organizer"
+msgstr "Организатор"
+
+#: ../src/core/sipe-conf.c:1671
+msgid "Alternative dial-in numbers"
+msgstr "Другие номера для дозвона"
+
+#. The next 13 texts make up the SIPE about note text
+#. About note, part 1/13: introduction
+#: ../src/core/sipe-core.c:228
+msgid ""
+"A third-party plugin implementing extended version of SIP/SIMPLE used by "
+"various products"
+msgstr "Независимый плагин реализующий расширенную версию SIP/SIMPLE используемую в таких продуктах, как"
+
+#. About note, part 2/13: home page URL (label)
+#: ../src/core/sipe-core.c:230
+msgid "Home Page"
+msgstr "Домашняя страничка"
+
+#. About note, part 3/13: support forum URL (label)
+#: ../src/core/sipe-core.c:232
+msgid "Support"
+msgstr "Поддержка"
+
+#. About note, part 4/13: support forum name (hyperlink text)
+#: ../src/core/sipe-core.c:234
+msgid "Help Forum"
+msgstr "Форум"
+
+#. About note, part 5/13: bug tracker URL (label)
+#: ../src/core/sipe-core.c:236
+msgid "Report Problems"
+msgstr "Сообщить о проблеме"
+
+#. About note, part 6/13: bug tracker URL (hyperlink text)
+#: ../src/core/sipe-core.c:238
+msgid "Bug Tracker"
+msgstr "База дефектов"
+
+#. About note, part 7/13: translation service URL (label)
+#: ../src/core/sipe-core.c:240
+msgid "Translations"
+msgstr "Страница локализации"
+
+#. About note, part 8/13: license type (label)
+#: ../src/core/sipe-core.c:242
+msgid "License"
+msgstr "Лицензия"
+
+#. About note, part 9/13: (REMOVED)
+#. About note, part 10/13: translation request, text before Transifex.com URL
+#. append a space if text is not empty
+#: ../src/core/sipe-core.c:246
+msgid "Please help us to translate SIPE to your native language here at "
+msgstr "Пожалуйста, помогите нам перевести SIPE на Ваш родной язык здесь "
+
+#. About note, part 11/13: translation request, text after Transifex.com URL
+#. start with a space if text is not empty
+#: ../src/core/sipe-core.c:249
+msgid " using convenient web interface"
+msgstr " с помощью удобного веб-интерфейса"
+
+#. About note, part 12/13: author list (header)
+#: ../src/core/sipe-core.c:251
+msgid "Authors"
+msgstr "Авторы"
+
+#. About note, part 13/13: Localization credit
+#. PLEASE NOTE: do *NOT* simply translate the english original
+#. but write something similar to the following sentence:
+#. "Localization for <language name> (<language code>): <name>"
+#: ../src/core/sipe-core.c:256
+msgid "Original texts in English (en): SIPE developers"
+msgstr "Русский перевод (ru): pier11"
+
+#: ../src/core/sipe-core.c:280
+msgid "SIP Exchange user name contains invalid characters"
+msgstr "Имя пользователя содержит недопустимые символы"
+
+#: ../src/core/sipe-core.c:288 ../src/purple/purple-buddy.c:485
+#: ../src/telepathy/telepathy-protocol.c:89
+#: ../src/telepathy/telepathy-protocol.c:197
+#, c-format
+msgid ""
+"User name should be a valid SIP URI\n"
+"Example: user@company.com"
+msgstr "Имя пользователя должно быть верным SIP URI\nПример: user@company.com"
+
+#: ../src/core/sipe-core.c:295
+msgid "Password is required when Single Sign-On is not enabled"
+msgstr "Если не включен Single Sign-On, требуется пароль"
+
+#: ../src/core/sipe-core.c:305
+msgid ""
+"Email address should be valid if provided\n"
+"Example: user@company.com"
+msgstr "Адрес электронной почты должен быть верным если введен\nПример: user@company.com"
+
+#: ../src/core/sipe-core.c:314
+msgid "SIP Exchange user name contains whitespace"
+msgstr "Имя пользователя не может содержать пробелы"
+
+#: ../src/core/sipe-core.c:328
+msgid ""
+"Email services URL should be valid if provided\n"
+"Example: https://exchange.corp.com/EWS/Exchange.asmx\n"
+"Example: https://domino.corp.com/maildatabase.nsf"
+msgstr "URL службы электронной почты должен быть верным, если введен\nПример: https://exchange.corp.com/EWS/Exchange.asmx\nПример: https://domino.corp.com/maildatabase.nsf"
+
+#. Translators: (!) should be as in localized Lotus Notes to be able to
+#. extract meeting location
+#: ../src/core/sipe-domino.c:260 ../src/core/sipe-domino.c:261
+msgid "Location:"
+msgstr "Место:"
+
+#: ../src/core/sipe-ft.c:264 ../src/core/sipe-ft-tftp.c:109
+#: ../src/core/sipe-ft-tftp.c:393 ../src/core/sipe-ft-tftp.c:422
+#: ../src/core/sipe-ft-tftp.c:481
+msgid "Socket read failed"
+msgstr "Не удалось прочитать из сокета"
+
+#: ../src/core/sipe-ft.c:412
+msgid "Received encryption key has wrong size."
+msgstr "Принятый ключ шифрования имеет неверный размер."
+
+#: ../src/core/sipe-ft.c:427
+msgid "Received hash key has wrong size."
+msgstr "Принятый ключ хеширования имеет неверный размер."
+
+#: ../src/core/sipe-ft.c:447
+msgid "Could not create listen socket"
+msgstr "Не удалось создать сокет для прослушивания"
+
+#: ../src/core/sipe-ft-lync.c:762 ../src/core/sipe-media.c:1328
+#: ../src/core/sipe-media.c:1339 ../src/core/sipe-media.c:1418
+#: ../src/core/sipe-media.c:1935
+msgid "Error occurred"
+msgstr "Произошла ошибка"
+
+#: ../src/core/sipe-ft-lync.c:763
+msgid "Error creating data stream"
+msgstr "Ошибка при создании потока данных"
+
+#: ../src/core/sipe-ft-tftp.c:115 ../src/core/sipe-ft-tftp.c:525
+#: ../src/core/sipe-ft-tftp.c:534
+msgid "Socket write failed"
+msgstr "Не удалось записать в сокет"
+
+#: ../src/core/sipe-ft-tftp.c:208
+msgid "File size is different from the advertised value."
+msgstr "Размер файла отличается от заявленного."
+
+#: ../src/core/sipe-ft-tftp.c:247
+msgid "Received MAC is corrupted"
+msgstr "Принятая подпись повреждена"
+
+#: ../src/core/sipe-ft-tftp.c:258
+msgid "Received file is corrupted"
+msgstr "Принятый файл поврежден"
+
+#: ../src/core/sipe-ft-tftp.c:287
+msgid "File transfer initialization failed."
+msgstr "Инициализация передачи файлов не удалась."
+
+#: ../src/core/sipe-ft-tftp.c:318
+msgid "File transfer authentication failed."
+msgstr "Не удалось проверить подлинность при передаче файла."
+
+#: ../src/core/sipe-ft-tftp.c:414 ../src/core/sipe-ft-tftp.c:432
+#: ../src/core/sipe-ft-tftp.c:495
+msgid "Out of memory"
+msgstr "Недостаточно памяти"
+
+#: ../src/core/sipe-group.c:168 ../src/core/sipe-notify.c:1173
+#: ../src/core/sipe-notify.c:1207 ../src/core/sipe-notify.c:1311
+#: ../src/purple/purple-search.c:128
+msgid "Other Contacts"
+msgstr "Другие контакты"
+
+#: ../src/core/sipe-groupchat.c:329
+#, c-format
+msgid ""
+"Group Chat Proxy setting is incorrect:\n"
+"\n"
+"\t%s\n"
+"\n"
+"Please update your Account."
+msgstr "Настройки прокси для групппового чата не верны:\n\n»%s\n\nПожалуйста измените настройки аккаунта."
+
+#: ../src/core/sipe-groupchat.c:332
+msgid "Couldn't find Group Chat server!"
+msgstr "Сервер группового чата не найден!"
+
+#: ../src/core/sipe-groupchat.c:508
+#, c-format
+msgid "This message was not delivered to chat room '%s'"
+msgstr "Сообщение не было доставлено в чат канал '%s'"
+
+#: ../src/core/sipe-groupchat.c:616
+msgid "Error retrieving room list"
+msgstr "Не удалось "
+
+#: ../src/core/sipe-groupchat.c:720
+msgid "Error joining chat room"
+msgstr "Ошибка подключения к чату"
+
+#. generate one error and remove all unprocessed messages
+#: ../src/core/sipe-im.c:197
+#, c-format
+msgid "Failed to invite %s"
+msgstr "Не удалось пригласить %s"
+
+#: ../src/core/sipe-incoming.c:756
+#, c-format
+msgid "Received a message with unrecognized contents from %s"
+msgstr "Поступило сообщение неподдерживаемого типа от %s"
+
+#: ../src/core/sipe-media.c:868 ../src/core/sipe-media.c:1486
+#: ../src/core/sipe-media.c:1496 ../src/core/sipe-media.c:1913
+#: ../src/core/sipe-media.c:1936
+msgid "Unable to establish a call"
+msgstr "Не удалось сделать вызов"
+
+#: ../src/core/sipe-media.c:869 ../src/core/sipe-media.c:1914
+msgid "Encryption settings of peer are incompatible with ours."
+msgstr "Настройки шифрования собеседника несовместимы с нашими."
+
+#: ../src/core/sipe-media.c:962
+#, c-format
+msgid "User %s rejected call"
+msgstr "Пользователь %s отклонил вызов"
+
+#: ../src/core/sipe-media.c:963
+msgid "Call rejected"
+msgstr "Вызов отклонен"
+
+#: ../src/core/sipe-media.c:1329 ../src/core/sipe-media.c:1419
+msgid "Error creating audio stream"
+msgstr "Ошибка при создании аудио потокa"
+
+#: ../src/core/sipe-media.c:1340
+msgid "Error creating video stream"
+msgstr "Ошибка при создании видео потокa"
+
+#: ../src/core/sipe-media.c:1384 ../src/purple/purple-chat.c:336
+msgid "Join conference call"
+msgstr "Присоединиться к конференции"
+
+#: ../src/core/sipe-media.c:1385
+msgid "Conference calls are not supported on this server."
+msgstr "Этот сервер не поддерживает конференции"
+
+#: ../src/core/sipe-media.c:1487
+msgid "Invalid phone number"
+msgstr "Неверный номер телефона"
+
+#: ../src/core/sipe-media.c:1497
+msgid "Audio Test Service is not available."
+msgstr "Служба аудиотеста недоступна"
+
+#: ../src/core/sipe-media.c:1879
+msgid "User unavailable"
+msgstr "Пользователь недоступен"
+
+#: ../src/core/sipe-media.c:1882
+#, c-format
+msgid "%s does not want to be disturbed"
+msgstr "%s не хочет, чтобы его беспокоили"
+
+#: ../src/core/sipe-media.c:1884
+#, c-format
+msgid "User %s is not available"
+msgstr "Пользователь %s недоступен"
+
+#: ../src/core/sipe-media.c:1896
+msgid "Unsupported media type"
+msgstr "Неподдерживаемый тип носителя"
+
+#: ../src/core/sipe-media.c:2258
+msgid "Media error"
+msgstr "Ошибка данных"
+
+#: ../src/core/sipe-media.c:2259
+msgid "Error while reading from stream"
+msgstr "Ошибка чтения из потока"
+
+#. reason = g_strdup(_("User logged out")); // [MS-OCER]
+#: ../src/core/sipe-notify.c:1151
+msgid "you are already signed in at another location"
+msgstr "Вы уже вошли в систему в другом месте"
+
+#: ../src/core/sipe-notify.c:1153
+msgid "user disabled"
+msgstr "пользователь отключен"
+
+#: ../src/core/sipe-notify.c:1155
+msgid "user moved"
+msgstr "пользователь перемещен"
+
+#: ../src/core/sipe-ocs2007.c:458 ../src/purple/purple-buddy.c:640
+#: ../src/purple/purple-buddy.c:647
+msgid "Blocked"
+msgstr "Заблокирован"
+
+#: ../src/core/sipe-ocs2007.c:459 ../src/purple/purple-buddy.c:636
+#: ../src/purple/purple-buddy.c:643
+msgid "Personal"
+msgstr "Личный"
+
+#. index 0
+#: ../src/core/sipe-ocs2007.c:460 ../src/purple/purple-buddy.c:637
+#: ../src/purple/purple-buddy.c:644
+msgid "Team"
+msgstr "Группа"
+
+#. SIPE_BUDDY_INFO_WORK_PHONE_DISPLAY
+#. SIPE_BUDDY_INFO_COMPANY
+#: ../src/core/sipe-ocs2007.c:461 ../src/purple/purple-buddy.c:76
+#: ../src/purple/purple-buddy.c:638 ../src/purple/purple-buddy.c:645
+#: ../src/purple/purple-search.c:66 ../src/purple/purple-search.c:229
+msgid "Company"
+msgstr "Компания"
+
+#: ../src/core/sipe-ocs2007.c:462 ../src/purple/purple-buddy.c:639
+#: ../src/purple/purple-buddy.c:646
+msgid "Public"
+msgstr "Общедоступный"
+
+#: ../src/core/sipe-ocs2007.c:464
+msgid "Unknown"
+msgstr "Неизвестный"
+
+#. Translators: remove (clear) previously assigned access level
+#: ../src/core/sipe-ocs2007.c:2589
+msgid "Unspecify"
+msgstr "Не определять"
+
+#: ../src/core/sipe-ocs2007.c:2608
+msgid "People in my company"
+msgstr "Пользователи в моей организации"
+
+#: ../src/core/sipe-ocs2007.c:2618
+msgid "People in domains connected with my company"
+msgstr "Пользователи в доменах, подключенных к моей организации"
+
+#: ../src/core/sipe-ocs2007.c:2627
+msgid "People in public domains"
+msgstr "Пользователи в общедоступных доменах"
+
+#: ../src/core/sipe-ocs2007.c:2637
+#, c-format
+msgid "People at %s"
+msgstr "Пользователи в %s"
+
+#: ../src/core/sipe-ocs2007.c:2662
+msgid "Add new domain..."
+msgstr "Добавить новый домен..."
+
+#: ../src/core/sipe-ocs2007.c:2691
+msgid "Online help..."
+msgstr "Онлайн помощь..."
+
+#: ../src/core/sipe-ocs2007.c:2699
+msgid "Access groups"
+msgstr "Группы доступа"
+
+#. * This has nothing to do with Availability numbers, like 3500 (online).
+#. * Just a mapping of Communicator Activities to tokens/translations
+#. @TODO: NULL means "default translation from Pidgin"?
+#. *        What about other backends?
+#. SIPE_ACTIVITY_UNSET
+#. SIPE_ACTIVITY_AVAILABLE
+#. SIPE_ACTIVITY_ONLINE
+#. SIPE_ACTIVITY_INACTIVE
+#: ../src/core/sipe-status.c:56
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. SIPE_ACTIVITY_BUSYIDLE
+#: ../src/core/sipe-status.c:58
+msgid "Busy-Idle"
+msgstr "Занят-Неактивен"
+
+#. SIPE_ACTIVITY_DND
+#. SIPE_ACTIVITY_BRB
+#: ../src/core/sipe-status.c:60
+msgid "Be right back"
+msgstr "Скоро вернусь"
+
+#. SIPE_ACTIVITY_AWAY
+#. SIPE_ACTIVITY_LUNCH
+#: ../src/core/sipe-status.c:62
+msgid "Out to lunch"
+msgstr "На обеде"
+
+#. SIPE_ACTIVITY_INVISIBLE
+#. SIPE_ACTIVITY_OFFLINE
+#. SIPE_ACTIVITY_ON_PHONE
+#: ../src/core/sipe-status.c:65
+msgid "In a call"
+msgstr "Говорю по телефону"
+
+#. SIPE_ACTIVITY_IN_CONF
+#: ../src/core/sipe-status.c:66
+msgid "In a conference"
+msgstr "На конференции"
+
+#. SIPE_ACTIVITY_IN_MEETING
+#: ../src/core/sipe-status.c:67
+msgid "In a meeting"
+msgstr "На собрании"
+
+#. SIPE_ACTIVITY_URGENT_ONLY
+#: ../src/core/sipe-status.c:69
+msgid "Urgent interruptions only"
+msgstr "Беспокоить только по срочным делам"
+
+#: ../src/core/sipe-subscriptions.c:189
+msgid "Presence subscription failed!"
+msgstr ""
+
+#: ../src/core/sipe-subscriptions.c:190
+msgid ""
+"One or more buddies will therefore permanently show as offline.\n"
+"\n"
+"Please check that there are no corrupted SIP URIs in your contacts list."
+msgstr ""
+
+#: ../src/core/sipe-ucs.c:674
+msgid "UCS initialization failed!"
+msgstr "Ошибка инициализации USC."
+
+#: ../src/core/sipe-ucs.c:676
+msgid ""
+"Couldn't find an Exchange server with the default Email settings. Therefore the contacts list will not work.\n"
+"\n"
+"You'll need to provide Email settings in the account setup."
+msgstr "Не удалось найти сервер Exchange с настройками Email по умолчанию. Из-за этого список контактов не будет работать.\n\nНеобходимо указать настройки Email в конфигурации учётной записи."
+
+#: ../src/core/sipe-ucs.c:677
+msgid ""
+"Couldn't find an Exchange server with the Email settings provided in the account setup. Therefore the contacts list will not work.\n"
+"\n"
+"Please correct your Email settings."
+msgstr "Не удалось найти сервер Exchange с указанными настройками Email. Из-за этого список контактов не будет работать.\n\nНеобходимо исправить настройки Email."
+
+#. Service unavailable; Server Internal Error; Server Time-out
+#. Not acceptable all.
+#. Message contents not allowed by policy
+#: ../src/core/sipe-user.c:78
+msgid ""
+"Your message or invitation was not delivered, possibly because it contains a"
+" hyperlink or other content that the system administrator has blocked."
+msgstr "Ваше сообщение или приглашение не было доставлено. Возможно, оно содержит гиперссылку или другое содержимое, заблоктрованное системным администратором."
+
+#: ../src/core/sipe-user.c:82
+#, c-format
+msgid ""
+"This message was not delivered to %s because the service is not available"
+msgstr "Сообщение не доставлено %s, потому что сервис недоступен"
+
+#. Busy Here
+#: ../src/core/sipe-user.c:84
+#, c-format
+msgid ""
+"This message was not delivered to %s because one or more recipients do not "
+"want to be disturbed"
+msgstr "Сообщение не доставлено %s, поскольку один или нескольно получателей были недоступны"
+
+#. Unsupported media type
+#: ../src/core/sipe-user.c:86
+#, c-format
+msgid ""
+"This message was not delivered to %s because one or more recipients don't "
+"support this type of message"
+msgstr "Это сообщение не было доставлено %s, поскольку один или нескольно получателей не поддерживают данный тип сообщения"
+
+#: ../src/core/sipe-user.c:88
+#, c-format
+msgid ""
+"This message was not delivered to %s because one or more recipients are "
+"offline"
+msgstr "Сообщение не доставлено %s, поскольку один или нескольно получателей были не в сети"
+
+#. SIPE_BUDDY_INFO_DISPLAY_NAME
+#: ../src/purple/purple-buddy.c:67
+msgid "Display name"
+msgstr "Отображаемое имя"
+
+#. SIPE_BUDDY_INFO_JOB_TITLE
+#: ../src/purple/purple-buddy.c:68
+msgid "Job title"
+msgstr "Должность"
+
+#. SIPE_BUDDY_INFO_CITY
+#: ../src/purple/purple-buddy.c:69
+msgid "City"
+msgstr "Город"
+
+#. SIPE_BUDDY_INFO_STATE
+#: ../src/purple/purple-buddy.c:70
+msgid "State"
+msgstr "Штат"
+
+#. SIPE_BUDDY_INFO_OFFICE
+#: ../src/purple/purple-buddy.c:71
+msgid "Office"
+msgstr "Офис"
+
+#. SIPE_BUDDY_INFO_DEPARTMENT
+#. SIPE_BUDDY_INFO_COUNTRY
+#: ../src/purple/purple-buddy.c:73 ../src/purple/purple-search.c:69
+#: ../src/purple/purple-search.c:231
+msgid "Country"
+msgstr "Страна"
+
+#. SIPE_BUDDY_INFO_WORK_PHONE
+#: ../src/purple/purple-buddy.c:74
+msgid "Business phone"
+msgstr "Рабочий телефон"
+
+#. SIPE_BUDDY_INFO_EMAIL
+#: ../src/purple/purple-buddy.c:77
+msgid "Email address"
+msgstr "Адрес электронной почты"
+
+#. SIPE_BUDDY_INFO_SITE
+#: ../src/purple/purple-buddy.c:78
+msgid "Site"
+msgstr "Сайт"
+
+#. SIPE_BUDDY_INFO_ZIPCODE
+#. SIPE_BUDDY_INFO_STREET
+#. SIPE_BUDDY_INFO_MOBILE_PHONE
+#. SIPE_BUDDY_INFO_MOBILE_PHONE_DISPLAY
+#. SIPE_BUDDY_INFO_HOME_PHONE
+#. SIPE_BUDDY_INFO_HOME_PHONE_DISPLAY
+#. SIPE_BUDDY_INFO_OTHER_PHONE
+#. SIPE_BUDDY_INFO_OTHER_PHONE_DISPLAY
+#. SIPE_BUDDY_INFO_CUSTOM1_PHONE
+#. SIPE_BUDDY_INFO_CUSTOM1_PHONE_DISPLAY
+#. SIPE_BUDDY_INFO_ALIAS
+#: ../src/purple/purple-buddy.c:89
+msgid "Alias"
+msgstr "Псевдоним"
+
+#. SIPE_BUDDY_INFO_DEVICE
+#: ../src/purple/purple-buddy.c:90
+msgid "Device"
+msgstr "Устройство"
+
+#: ../src/purple/purple-buddy.c:260 ../src/purple/purple-buddy.c:278
+msgid "you"
+msgstr "Вас"
+
+#: ../src/purple/purple-buddy.c:584
+msgid ""
+"https://sourceforge.net/apps/mediawiki/sipe/index.php?title=Access_Levels"
+msgstr "https://sourceforge.net/apps/mediawiki/sipe/index.php?title=%D0%A3%D1%80%D0%BE%D0%B2%D0%BD%D0%B8_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0"
+
+#: ../src/purple/purple-buddy.c:626
+msgid "Domain"
+msgstr "Домен"
+
+#: ../src/purple/purple-buddy.c:655 ../src/purple/purple-buddy.c:656
+msgid "Add new domain"
+msgstr "Добавить новый домен"
+
+#: ../src/purple/purple-buddy.c:657
+msgid "Add"
+msgstr "Добавить"
+
+#: ../src/purple/purple-buddy.c:658
+msgid "Cancel"
+msgstr "Отмена"
+
+#: ../src/purple/purple-buddy.c:810
+msgid "Copy to"
+msgstr "Скопировать в"
+
+#: ../src/purple/purple-chat.c:313
+msgid "Lock"
+msgstr "Заблокировать"
+
+#: ../src/purple/purple-chat.c:318
+msgid "Unlock"
+msgstr "Разблокировать"
+
+#: ../src/purple/purple-chat.c:345
+msgid "Show presentation"
+msgstr "Показать презентацию"
+
+#: ../src/purple/purple-chat.c:352
+msgid "Meeting entry info"
+msgstr "Информация о собрании"
+
+#: ../src/purple/purple-groupchat.c:56
+msgid "_URI:"
+msgstr "_URI:"
+
+#: ../src/purple/purple-groupchat.c:160
+msgid "Users"
+msgstr "Пользователи"
+
+#: ../src/purple/purple-groupchat.c:163
+msgid "Invite"
+msgstr "Пригласить"
+
+#: ../src/purple/purple-groupchat.c:166
+msgid "Private"
+msgstr "Приват"
+
+#: ../src/purple/purple-groupchat.c:169
+msgid "Log"
+msgstr "Лог"
+
+#: ../src/purple/purple-groupchat.c:172
+msgid "Description"
+msgstr "Описание"
+
+#: ../src/purple/purple-im.c:86
+#, c-format
+msgid "Conversation subject: %s"
+msgstr "Тема обсуждения: %s"
+
+#. Macro to reduce code repetition
+#. Translators: noun
+#: ../src/purple/purple-plugin-common.c:193
+msgid "Message"
+msgstr "Сообщение"
+
+#: ../src/purple/purple-plugin-common.c:435
+msgid "Connecting"
+msgstr "Установка соединения"
+
+#: ../src/purple/purple-plugin-common.c:465
+msgid "Password required"
+msgstr "Требуется пароль"
+
+#: ../src/purple/purple-plugin-common.c:625
+msgid "user@company.com"
+msgstr "user@company.com"
+
+#: ../src/purple/purple-plugin-common.c:747
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: ../src/purple/purple-plugin-common.c:751
+#: ../src/purple/purple-plugin-common.c:752
+msgid "Call a phone number"
+msgstr "Позвонить по номеру телефона"
+
+#: ../src/purple/purple-plugin-common.c:755
+msgid "_Call"
+msgstr "_Вызов"
+
+#: ../src/purple/purple-plugin-common.c:756
+#: ../src/purple/purple-plugin-common.c:804 ../src/purple/purple-search.c:240
+msgid "_Cancel"
+msgstr "О_тменить"
+
+#: ../src/purple/purple-plugin-common.c:783
+msgid "Meeting location"
+msgstr "Место совещания"
+
+#: ../src/purple/purple-plugin-common.c:785
+msgid "Alternatively"
+msgstr "Другие варианты"
+
+#: ../src/purple/purple-plugin-common.c:787
+msgid "Organizer email"
+msgstr "Email организатора"
+
+#: ../src/purple/purple-plugin-common.c:789
+msgid "Meeting ID"
+msgstr "Идентификатор собрания"
+
+#: ../src/purple/purple-plugin-common.c:793
+msgid "Join conference"
+msgstr "Присоединиться к конференции"
+
+#: ../src/purple/purple-plugin-common.c:794
+msgid "Join scheduled conference"
+msgstr "Присоедениться к запланированной конференции"
+
+#: ../src/purple/purple-plugin-common.c:795
+msgid ""
+"Enter meeting location string you received in the invitation.\n"
+"\n"
+"Valid location will be something like\n"
+"meet:sip:someone@company.com;gruu;opaque=app:conf:focus:id:abcdef1234\n"
+"conf:sip:someone@company.com;gruu;opaque=app:conf:focus:id:abcdef1234\n"
+"or\n"
+"https://meet.company.com/someone/abcdef1234"
+msgstr "Укажите место встречи из полученного Вами приглашения\nКорректное место встречи выглядит примерно так:\nmeet:sip:someone@company.com;gruu;opaque=app:conf:focus:id:abcdef1234\nconf:sip:someone@company.com;gruu;opaque=app:conf:focus:id:abcdef1234\nлибо\nhttps://meet.company.com/someone/abcdef1234\n "
+
+#: ../src/purple/purple-plugin-common.c:803
+msgid "_Join"
+msgstr "_Регистрация"
+
+#: ../src/purple/purple-plugin-common.c:818
+#: ../src/purple/purple-plugin-common.c:836
+msgid "Publishing of calendar information has been disabled"
+msgstr "Публикация данных из календаря выключена"
+
+#: ../src/purple/purple-plugin-common.c:855
+msgid "About SIPE plugin..."
+msgstr "О плагине SIPE..."
+
+#: ../src/purple/purple-plugin-common.c:858
+msgid "Contact search..."
+msgstr "Поиск контактов..."
+
+#: ../src/purple/purple-plugin-common.c:862
+msgid "Call a phone number..."
+msgstr "Позвонить по номеру телефона..."
+
+#: ../src/purple/purple-plugin-common.c:865
+msgid "Test call"
+msgstr "Тестовый звонок"
+
+#: ../src/purple/purple-plugin-common.c:869
+msgid "Join scheduled conference..."
+msgstr "Регистрация на запланированной конференции ..."
+
+#: ../src/purple/purple-plugin-common.c:872
+msgid "Republish Calendar"
+msgstr "Опубликовать календарь"
+
+#: ../src/purple/purple-plugin-common.c:875
+msgid "Reset status"
+msgstr "Сбросить состояние"
+
+#. *
+#. * When adding new string settings please make sure to keep these
+#. * in sync:
+#. *
+#. *     api/sipe-backend.h
+#. *     purple-settings.c:setting_name[]
+#: ../src/purple/purple-plugin-common.c:893
+msgid ""
+"Server[:Port]\n"
+"(leave empty for auto-discovery)"
+msgstr "Сервер[:Порт]\n(оставьте пустым для авто-обнаружения)"
+
+#: ../src/purple/purple-plugin-common.c:896
+msgid "Connection type"
+msgstr "Тип подключения"
+
+#: ../src/purple/purple-plugin-common.c:897
+#: ../src/purple/purple-plugin-common.c:909
+msgid "Auto"
+msgstr "Автоматически"
+
+#: ../src/purple/purple-plugin-common.c:898
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#: ../src/purple/purple-plugin-common.c:899
+msgid "TCP"
+msgstr "TCP"
+
+#. option = purple_account_option_bool_new(_("Publish status (note: everyone
+#. may watch you)"), "doservice", TRUE);
+#. sipe_prpl_info.protocol_options =
+#. g_list_append(sipe_prpl_info.protocol_options, option);
+#: ../src/purple/purple-plugin-common.c:905
+msgid "User Agent"
+msgstr "Агент пользователя"
+
+#: ../src/purple/purple-plugin-common.c:908
+msgid "Authentication scheme"
+msgstr "Схема проверки подлинности "
+
+#: ../src/purple/purple-plugin-common.c:910
+msgid "NTLM"
+msgstr "NTLM"
+
+#: ../src/purple/purple-plugin-common.c:912
+msgid "Kerberos"
+msgstr "Kerberos"
+
+#: ../src/purple/purple-plugin-common.c:914
+msgid "TLS-DSK"
+msgstr "TLS-DSK"
+
+#. * When the user selects Single Sign-On then SIPE will ignore the
+#. * settings for "login name" and "password". Instead it will use the
+#. * default credentials provided by the OS.
+#. *
+#. * NOTE: the default must be *OFF*, i.e. it is up to the user to tell
+#. *       SIPE that it is OK to use Single Sign-On or not.
+#. *
+#. * Configurations that are known to support Single Sign-On:
+#. *
+#. *  - Windows, host joined to domain, SIPE with SSPI: NTLM
+#. *  - Windows, host joined to domain, SIPE with SSPI: Kerberos
+#. *  - SIPE with libkrb5, valid TGT in cache (kinit):  Kerberos
+#: ../src/purple/purple-plugin-common.c:932
+msgid "Use Single Sign-On"
+msgstr "Использовать Single Sign-On"
+
+#. * Example (Exchange): https://server.company.com/EWS/Exchange.asmx
+#. *  Example (Domino)  : https://[domino_server]/[mail_database_name].nsf
+#: ../src/purple/purple-plugin-common.c:939
+msgid "Don't publish my calendar information"
+msgstr "Не публиковать данные из моего календаря"
+
+#: ../src/purple/purple-plugin-common.c:942
+msgid ""
+"Show profile pictures from web\n"
+"(potentially dangerous)"
+msgstr ""
+
+#: ../src/purple/purple-plugin-common.c:945
+msgid ""
+"Email services URL\n"
+"(leave empty for auto-discovery)"
+msgstr "URL службы электронной почты\n(оставьте пустым для авто-обнаружения)"
+
+#: ../src/purple/purple-plugin-common.c:948
+msgid ""
+"Email address\n"
+"(if different from Username)"
+msgstr "Адрес электронной почты\n(если отличен от Имени пользователя)"
+
+#. * Example (Exchange): DOMAIN\user  or  user@company.com
+#. *  Example (Domino)  : email_address
+#: ../src/purple/purple-plugin-common.c:954
+msgid ""
+"Email login\n"
+"(if different from Login)"
+msgstr "Логин электронной почты\n(если отличен от Логина)"
+
+#: ../src/purple/purple-plugin-common.c:957
+msgid ""
+"Email password\n"
+"(if different from Password)"
+msgstr "Пароль электронной почты\n(если отличен от Пароля)"
+
+#. * Example (federated domain): company.com      (i.e. ocschat@company.com)
+#. *  Example (non-default user): user@company.com
+#: ../src/purple/purple-plugin-common.c:964
+msgid ""
+"Group Chat Proxy\n"
+"   company.com  or  user@company.com\n"
+"(leave empty to determine from Username)"
+msgstr "Прокси пруппового чата \ncompany.com или user@company.com \n(оставьте пустым, чтобы использовать \"Имя пользователя\")"
+
+#: ../src/purple/purple-plugin-common.c:968
+msgid "Remote desktop client"
+msgstr "Клиент удалённого рабочего стола"
+
+#: ../src/purple/purple-plugin-common.c:973
+msgid "Media encryption"
+msgstr "Шифрование данных"
+
+#: ../src/purple/purple-plugin-common.c:974
+msgid "Obey server policy"
+msgstr "Следовать политике сервера"
+
+#: ../src/purple/purple-plugin-common.c:975
+msgid "Always"
+msgstr "Всегда"
+
+#: ../src/purple/purple-plugin-common.c:976
+msgid "Optional"
+msgstr "Не обязательно"
+
+#: ../src/purple/purple-plugin-common.c:977
+msgid "Disabled"
+msgstr "Отключен"
+
+#: ../src/purple/purple-plugin-common.c:987
+msgid ""
+"Login\n"
+"   user  or  DOMAIN\\user  or\n"
+"   user@company.com"
+msgstr "Логин\n   user  или  DOMAIN\\user  или\n   user@company.com"
+
+#: ../src/purple/purple-search.c:60
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: ../src/purple/purple-search.c:63
+msgid "Name"
+msgstr "Имя"
+
+#: ../src/purple/purple-search.c:72 ../src/purple/purple-search.c:225
+msgid "Email"
+msgstr "Email"
+
+#: ../src/purple/purple-search.c:221
+msgid "First name"
+msgstr "Имя"
+
+#: ../src/purple/purple-search.c:223
+msgid "Last name"
+msgstr "Фамилия"
+
+#: ../src/purple/purple-search.c:227
+msgid "SIP ID"
+msgstr "SIP ID"
+
+#: ../src/purple/purple-search.c:235
+msgid "Search"
+msgstr "Искать"
+
+#: ../src/purple/purple-search.c:236
+msgid "Search for a contact"
+msgstr "Поиск контактов"
+
+#: ../src/purple/purple-search.c:237
+msgid ""
+"Enter the information for the person you wish to find. Empty fields will be "
+"ignored."
+msgstr "Введите информацию о человеке, которого вы хотите найти. Пустые поля будут игнорироваться."
+
+#: ../src/purple/purple-search.c:239
+msgid "_Search"
+msgstr "_Искать"
+
+#: ../src/purple/purple-transport.c:149
+msgid "Read error"
+msgstr "Ошибка чтения"
+
+#: ../src/purple/purple-transport.c:153
+#: ../src/telepathy/telepathy-transport.c:96
+msgid "Server has disconnected"
+msgstr "Сервер прервал соединение"
+
+#: ../src/purple/purple-transport.c:215
+msgid "Could not connect"
+msgstr "Не удалось установить соединение"
+
+#: ../src/purple/purple-transport.c:285
+msgid "Could not create SSL context"
+msgstr "Не удалось создать контекст SSL"
+
+#: ../src/purple/purple-transport.c:307
+msgid "Could not create socket"
+msgstr "Не удалось создать сокет"
+
+#: ../src/purple/purple-transport.c:431
+msgid "Write error"
+msgstr "Ошибка записи"

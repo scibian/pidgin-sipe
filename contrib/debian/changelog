@@ -1,0 +1,710 @@
+pidgin-sipe (1.23.2-1) unstable; urgency=low
+
+  * New upstream version 1.23.2 "Bug Fixes II" (2018-03-10)
+	- fix some HTTP requests that were not sent (Jakub Adam, Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 10 Mar 2018 17:52:35 +0200
+
+pidgin-sipe (1.23.1-1) unstable; urgency=low
+
+  * New upstream version 1.23.1 "Bug Fixes I" (2018-02-25)
+	- Fixed #338: Incorrect port 0 for IPv6 socket on Windows (Stefan Becker)
+	- Fixed #337: Duplicate candidates in SDP (Jakub Adam, Stefan Becker)
+	- Fixed #336: Lync autodiscover does not follow user redirect (Stefan Becker)
+	- media: unconditionally ignore multichannel codecs (Jakub Adam)
+	- updated translations: Turkish (tr)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 25 Feb 2018 15:05:00 +0200
+
+pidgin-sipe (1.23.0-1) unstable; urgency=low
+
+  * New upstream version 1.23.0 "D-Bus, IPv6, OS X 10.11+" (2017-10-28)
+	- Feature #101: Mac OS X 10.13 OpenSSL support (Stefan Becker)
+	- Feature #100: Extend libpurple D-Bus interface (Stefan Becker)
+	- Feature #99: IPv6 addresses in SIP & SDP messages (Stefan Becker)
+	- Feature #96: Support for OS X 10.11+ SDK (Stefan Becker)
+	- don't load buddy photos from unknown sites by default (Jakub Adam, Stefan Becker)
+	  * custom web URIs pose a security risk as they may be abused
+	  * users can override this behaviour in the account settings
+	  * Office365 accounts should not be affected by this change
+	- add support for GMime 3.0 API (Stefan Becker)
+	- raise BR glib-2.0 >= 2.18.0 (Stefan Becker)
+	- raise BR purple >= 2.7.0 (Stefan Becker)
+	- drop support for GMime 2.4 (Stefan Becker)
+	- drop support for gstreamer-0.10 (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 28 Oct 2017 18:16:00 +0300
+
+pidgin-sipe (1.22.1-1) unstable; urgency=low
+
+  * New upstream version 1.22.1 "Bug Fixes I" (2017-06-11)
+	- Fixed #320: Multiple client detection broken (Stefan Becker)
+	- speed up Lync Autodiscover by using AccessLocation (Andrey Vaynberger)
+	- adium: update build instructions for Xcode 7.x or newer (Stefan Becker)
+	  * the build environment used for releases 1.22.0 or older (Xcode 6.x
+	    on OS X 10.11) is no longer available to the project
+	  * releases starting with 1.22.1 will use Xcode 8.x on macOS 10.12
+	  * build target continues to be OS X 10.9
+	- purple: avoid rare SSL read deadlock (Stefan Becker)
+	- various minor fixes (Michael Olbrich)
+	- crypto: make code compile with OpenSSL 1.1.0 (Stefan Becker)
+	- drop references to Reuters Messaging (Stefan Becker)
+	- updated translations: Lithuanian (lt), Russian (ru), Swedish (sv), Turkish (tr)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 11 Jun 2017 18:38:00 +0300
+
+pidgin-sipe (1.22.0-1) unstable; urgency=low
+
+  * New upstream version 1.22.0 "Application Sharing, Lync Autodiscover & Logging" (2017-02-01)
+	- Feature #93: Support for Lync Autodiscover (Stefan Becker)
+	- Feature #6: Application Sharing Viewer (Jakub Adam)
+	  * requires libpurple >= 2.12.0
+	  * needs an external RDP client - remmina and xfreerdp are supported
+	- Fixed #315: Crash when contact list is empty (Stefan Becker)
+	- Fixed #314: sipe login problems with long pw (Stefan Becker)
+	- separate logging and debugging output (Stefan Becker)
+	  * logging is always shown, e.g. in the Pidgin debug window
+	  * full message debugging now requires PURPLE_UNSAFE_DEBUG=1
+	- new translations: Greek (el), Lithuanian (lt)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Wed, 01 Feb 2017 18:57:00 +0200
+
+pidgin-sipe (1.21.1-1) unstable; urgency=low
+
+  * New upstream version 1.21.1 "Bug Fixes I" (2016-05-28)
+	- various bug fixes in media support (Jakub Adam)
+	- configure no longer ignores CFLAGS/LDFLAGS/LIBS (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 28 May 2016 18:19:00 +0300
+
+pidgin-sipe (1.21.0-1) unstable; urgency=low
+
+  * New upstream version 1.21.0 "Lync File Transfer" (2016-04-23)
+	- Feature #91: Support embedded XML as buddy photo URL (Stefan Becker)
+	- Feature #90: Add AppStream metadata file (Jiri Eischmann, Stefan Becker)
+	- Feature #89: Improve "Join scheduled conference" dialog  (Stefan Becker)
+	- Feature #87: Support multiple HTTP cookies (Stefan Becker)
+	- Feature #85: XML raw extract should ignore name space (Stefan Becker)
+	- Fixed #311: Crash when SIP transport becomes invalid (Stefan Becker)
+	- Fixed #293: Mandatory wsa:MessageID node missing (Stefan Becker)
+	- add support for Lync File Transfer protocol (Jakub Adam)
+	  * requires libpurple >= 2.12.0
+	  * Lync FT will be used for sending files when Lync 2013 is detected
+	- add build options to "About SIPE plugin" message (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 23 Apr 2016 15:55:00 +0300
+
+pidgin-sipe (1.20.1-1) unstable; urgency=low
+
+  * New upstream version 1.20.1 "Bug Fixes I" (2015-10-24)
+	- add support for another type of ADFS response (Stefan Becker)
+	- improve configure check for back-ported features (Stefan Becker, Jakub Adam)
+	- updated translations: French (fr), Russian (ru)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 24 Oct 2015 15:20:00 +0300
+
+pidgin-sipe (1.20.0-1) unstable; urgency=low
+
+  * New upstream version 1.20.0 "SRTP, Conference URL & TLS-DSK Improvements" (2015-08-29)
+	- Feature #82: Parse HTML from Lync conference URL (Stefan Becker)
+	- Feature #69: SRTP Support (Jakub Adam)
+	  * requires libpurple >= 3.0.0
+	- Fixed #285: Office365 rejects RC4 in TLS-DSK (Stefan Becker)
+	  * added support for AES-128/256-CBC
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 29 Aug 2015 18:07:00 +0300
+
+pidgin-sipe (1.19.1-1) unstable; urgency=low
+
+  * New upstream version 1.19.1 "Bug Fixes I" (2015-04-04)
+	- Fixed #278: 488 error after libnice upgrade (Jakub Adam)
+	- fix SIP re-authentication timeout to be max. 8 hours (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 04 Apr 2015 17:05:00 +0300
+
+pidgin-sipe (1.19.0-1) unstable; urgency=low
+
+  * New upstream version 1.19.0 "Auto Authentication, MFA & Search Improvements" (2015-02-07)
+	- Feature #80: Move parsing of login name (Stefan Becker)
+	- Feature #79: support for Adium group chat bookmarks (David Matz, Stefan Becker)
+	- Feature #78: Support searching for SIP ID (Stefan Becker)
+	- Feature #76: ADFS can't always be used (Stefan Becker)
+	  * for accounts that have Multi-Factor Authentication (MFA) enabled
+	- Feature #73: Support buddy photos from contactCard (Stefan Becker)
+	- Feature #65: Fall back from Kerberos to NTLM (Stefan Becker)
+	- Fixed #277: Raised contact names (Stefan Becker)
+	- Fixed #240: Corrupted HTTP response crashes SIPE (Stefan Becker)
+	- fix calendar state machine when EWS URL is set (Stefan Becker)
+	- fall back to [MS-DLX] BasicSearch to improve search experience (Stefan Becker, various)
+	- implement search functionality for UCS (Stefan Becker)
+	- adium: add chat room list UI (David Matz)
+	- adium: fix duplicate debug log messages (Stefan Becker)
+	- support for libnice TCP mode (Youness Alaoul, Jakub Adam)
+	- refactor CCCP request code (Jakub Adam)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 07 Feb 2015 13:48:00 +0200
+
+pidgin-sipe (1.18.5-1) unstable; urgency=low
+
+  * New upstream version 1.18.5 "Bug Fixes V" (2014-12-29)
+	- Fixed #276: Redundant "const" breaks build with clang (Stefan Becker)
+	- Fixed #269: purple idle-away converted to Away (Stefan Becker)
+	- svc: use authuser for RealmInfo request (Stefan Becker)
+	- adium: add release checking script (Stefan Becker)
+	- mingw: update fetch script to Pidgin 2.10.11 (Stefan Becker)
+	- updated translations: Italian (it), Swedish (sv)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Mon, 29 Dec 2014 21:04:00 +0200
+
+pidgin-sipe (1.18.4-1) unstable; urgency=low
+
+  * New upstream version 1.18.4 "Bug Fixes IV" (2014-10-18)
+	- Fixed #263: ADFS fails when user and login name differ (Stefan Becker)
+	- Fixed #262: Adium: SIPE doesn't auto- or re-connect (Stefan Becker)
+	- fixed memory leaks (Stefan Becker)
+	- fixed processing of presence publish event response (John Zhang, Stefan Becker)
+	  * fixes a longstanding issue that the Pidgin user status sometimes
+	    didn't switch back to "Available" after the end of a meeting
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 18 Oct 2014 17:24:00 +0300
+
+pidgin-sipe (1.18.3-1) unstable; urgency=low
+
+  * New upstream version 1.18.3 "Bug Fixes III" (2014-08-16)
+	- Fixed #259: HTML response to EWS autodiscover triggers libxml2 assert (Stefan Becker)
+	- Fixed #258: V&V call gets rejected when IPv6 is enabled (Stefan Becker, Jakub Adam)
+	- Fixed #257: Windows 7: SIPE crashes after a minute (Stefan Becker)
+	- mingw: improve crash information reporting (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 16 Aug 2014 14:31:00 +0300
+
+pidgin-sipe (1.18.2-1) unstable; urgency=low
+
+  * New upstream version 1.18.2 "Bug Fixes II" (2014-06-07)
+	- Fixed #255: Crash when PersistentChat sends BYE instead of response (Stefan Becker)
+	- Fixed #248: Remove libpurple SSL configure check (Stefan Becker)
+	- Fixed #245: "Unable to resolve DNS SRV record" error when joining conference (Stefan Becker)
+	- Fixed #241: Adium filters ":" from "sip:" (Stefan Becker)
+	- Fixed #210: Conference call ends with error message (for real this time, Jakub Adam)
+	- ews: extract settings also from type EXPR (Stefan Becker)
+	- ucs: honor user specified email URL (Stefan Becker)
+	- adium: fix compilation on OS X 10.7 (Stefan Becker)
+	- updated Transifex URLs (Stefan Becker)
+	- updated translations: Hindi (hi), Telugu (te)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 07 Jun 2014 12:29:00 +0300
+
+pidgin-sipe (1.18.1-1) unstable; urgency=low
+
+  * New upstream version 1.18.1 "Bug Fixes I" (2014-04-12)
+	- Fixed #238: False "not delivered" in conference (Stefan Becker)
+	- Fixed #237: HTML escaping not removed from URL (Stefan Becker)
+	- Fixed #210: Conference call ends with error message (Jakub Adam)
+	- fix endless loop with failed HTTP Basic authentication (Stefan Becker)
+	- fix crash when gstreamer nice plugin is missing (Stefan Becker, Jakub Adam)
+	- fix EWS autodiscover for some Office 365 users (Stefan Becker)
+	- purple: fix missing "Copy to" in buddy menu (Stefan Becker)
+	- purple/adium: ignore empty search values (Stefan Becker)
+	- adium: fix group chat UI (Stefan Becker)
+	- adium: implement BEAST mitigations for 10.8.5 (Michael Lamb)
+	- add indication when user is connected from a mobile device (Harris Kauffman)
+	- updated translations: Chinese (zh_CN), Portuguese (pt)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 12 Apr 2014 17:54:00 +0300
+
+pidgin-sipe (1.18.0-1) unstable; urgency=low
+
+  * New upstream version 1.18.0 "Adium, GSS-NTLMSSP & OpenSSL" (2014-01-11)
+	- Feature #71: Add support for EWS Autodiscover redirection (Stefan Becker)
+	- Feature #69: Add UI support for (group) chats (Michael Lamb)
+	  * NOTE: Adium does not have an UI to fetch the room list
+	- Feature #64: Add support for GSS-NTLMSSP (Stefan Becker)
+	  * sip-sec-krb5.c module has been renamed to sip-sec-gssapi.c
+	  * if gssapi/gssapi_ntlmssp.h is detected then sip-sec-ntlm.c will
+	    be disabled and NTLM will be handled by sip-sec-gssapi.c instead
+	  * NOTE: at the time of this writing the user has to set up
+	          GSS-NTLMSSP by hand on his system, i.e. /etc/gss/mech
+	- Fixed #227: Adium client doesn't save email option settings (Harris P. Kauffman)
+	- Fixed #216: SIPE stops working on Mavericks (Stefan Becker, Michael Lamb)
+	  * add an UI option to disable SSL BEAST mitigations
+	  * NOTE: requires Adium 1.5.10
+	- Fixed #197: Account stays in connecting stage (Harris P. Kauffman)
+	- cleanup for sip-sec Kerberos & SSPI modules (Stefan Becker)
+	  * replace old TGT hack with gss_acquire_cred_with_password()
+	  * clean up Kerberos detection in configure
+	  * remove special case handling; code is more straight-forward now
+	  * thanks to David Woodhouse and Simo Sorce for the GSSAPI information
+	- implement internal keepalive handling (Stefan Becker)
+	- implement crypto backend based on OpenSSL (Stefan Becker)
+	- adium: Xcode project files update (Michael Lamb)
+	- adium: replace NSS crypto backend with OpenSSL (Stefan Becker)
+	  * NOTE: please make sure to read the updated build instructions!
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 11 Jan 2014 16:10:00 +0200
+
+pidgin-sipe (1.17.3-1) unstable; urgency=low
+
+  * New upstream version 1.17.3 "Bug Fixes III" (2013-12-11)
+	- Fixed #225: HTTP re-authentication with NTLM fails (Stefan Becker)
+	- Fixed #222: SIPE crashes when groupchat session expires (Stefan Becker)
+	- fix UCS Persona key extraction (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Wed, 11 Dec 2013 21:18:00 +0200
+
+pidgin-sipe (1.17.2-1) unstable; urgency=low
+
+  * New upstream version 1.17.2 "Bug Fixes II" (2013-11-30)
+	- Fixed #214: Typing notification does not always work (Stefan Becker)
+	  * reverted one change which caused problems for some users
+	- Fixed #222: SIPE crashes when groupchat session expires (Stefan Becker)
+	- updated translations: Romanian (ro)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 30 Nov 2013 17:51:00 +0200
+
+pidgin-sipe (1.17.1-1) unstable; urgency=low
+
+  * New upstream version 1.17.1 "Bug Fixes I" (2013-11-16)
+	- Fixed #215: Password not entity encoded in WSSE element (Stefan Becker)
+	- Fixed #214: Typing notification does not always work (Stefan Becker)
+	- accept alternatives for webticket timestamp/keydata (Stefan Becker)
+	- adium: add "don't publish calendar" to account UI (Stefan Becker)
+	- contrib: add SSL BEAST mitigation patch for Adium (Stefan Becker)
+	- updated translations: French (fr)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 16 Nov 2013 16:21:00 +0200
+
+pidgin-sipe (1.17.0-1) unstable; urgency=low
+
+  * New upstream version 1.17.0 "Lync 2013" (2013-09-21)
+	- Feature #62: Support for Lync 2013 Unified Contact Store (Stefan Becker)
+	- Feature #59: Support for Lync 2013 Persistent Chats (Stefan Becker)
+	- Fixed #211: Status "away" or "busy" incorrectly mapped to "Invisible" (Michael Lamb)
+	- Fixed #209: group chat doesn't like HTML (Stefan Becker)
+	- Fixed #200: OCS archiving system blocks audio/video connection (Jakub Adam)
+	- Fixed #187: Duplicate messages in group chat (Stefan Becker)
+	- Fixed #184: Duplicate users showing in Group Chat (Stefan Becker)
+	- fix EWS autodiscover for Office 365 (Stefan Becker)
+	- add support for group chat history (Stefan Becker)
+	- add support for buddy photos on Lync 2013 (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 21 Sep 2013 16:34:00 +0300
+
+pidgin-sipe (1.16.1-1) unstable; urgency=low
+
+  * New upstream version 1.16.1 "Bug Fixes I" (2013-07-13)
+	- Feature #66: Windows DLL version information (Stefan Becker)
+	- fix call failure when host has multiple IP addresses (Jakub Adam)
+	- fix buddy list handling after moving to Lync 2013 (Stefan Becker)
+	  * Lync 2013 migrates buddy list to Unified Contact Store (UCS)
+	  * NOTE: modifying the buddy list is *NOT* supported yet!
+	- crash fixes for new HTTP stack (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 13 Jul 2013 16:20:00 +0300
+
+pidgin-sipe (1.16.0-1) unstable; urgency=low
+
+  * New upstream version 1.16.0 "HTTP Rewrite & Subscription Fixes" (2013-06-14)
+	- Feature #58: Implement Digest authentication scheme for SIP Proxy Authentication (Stefan Becker)
+	- Fixed #196: Useragent value not forwarded to core (Michael Lamb)
+	- Fixed #193: Pidgin Status changes stop working (Stefan Becker)
+	- Fixed #186: Users appear offline when they are not (Stefan Becker)
+	- fix kinit-less use case with krb5 >= 1.11 (Stefan Becker)
+	- rewritten HTTP stack from scratch (Stefan Becker)
+	  * cleaner, layered and hopefully less error-prone implementation
+	  * HTTP stack internals no longer exposed to user code
+	  * reduced network traffic and less SSL handshakes by utilizing HTTP/1.1
+	    connection keep alive for multiple HTTP requests to the same host
+	- switch purple backend to deferred destruction approach (Stefan Becker)
+	  * Pidgin should no longer crash at connection close, even in corner cases
+	- add menu entry to make a call with a phone number (Jakub Adam)
+	- some progress on telepathy backend (Stefan Becker)
+	  * add TLS certificate accept/reject user interaction
+	  * add "Single Sign-On" & "Don't Publish Calendar" account options
+
+ -- Stefan Becker <chemobejk@gmail.com>  Fri, 14 Jun 2013 19:57:00 +0300
+
+pidgin-sipe (1.15.1-1) unstable; urgency=low
+
+  * New upstream version 1.15.1 "Bug Fixes I"
+	- NOTE: SIPE SourceForge project got updated. Because of this all bug
+	        and feature request numbers have changed.
+	- Fixed #190: SIP 407 response rejected with invalid message signature (Stefan Becker)
+	- Fixed #189: Adium SIPE plugin vs. libpurple linking issues (Michael Lamb)
+	- fixed free-after-use issue that caused crashes for some users (Stefan Becker)
+	- fixed broken NTLM fallback in Negotiate (Stefan Becker)
+	- fixed subscriptions expiration by subscribing again after re-authentication (Stefan Becker)
+	- allow different user name and login for Office 365 authentication (Stefan Becker)
+	- add SIPE version & git commit ID to debug log (Stefan Becker)
+	- added valgrind log analyzer script (Stefan Becker)
+	- added NTLM message anaylzer (Stefan Becker)
+	- updated translations: Hungarion (hu), Romanian (ro)
+	- updated Adium port (Michael Lamb, Harris P. Kauffman)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 07 Apr 2013 15:09:00 +0300
+
+pidgin-sipe (1.15.0-1) unstable; urgency=low
+
+  * New upstream version 1.15.0 "Authentication & Autodiscovery Update"
+	- Feature #3578135: Support Kerberos for HTTP(S) authentication w/o SSPI (Stefan Becker)
+	  * effective for all platforms that support --with-krb5
+	  * this triggered a series of cleanup & simplification changes and
+	    functionality & memory leak fixes in the sip-sec modules
+	  * special thanks to Jarek Polok for the logs and testing
+	- Feature #3594094: Add HTTPS to autodiscover probe (Stefan Becker)
+	- Feature #3607040: Simple button to disable calendar integration (Stefan Becker)
+	- Fixed #3603228: Crash on 1.14.1 when connecting to server (Stefan Becker)
+	- Fixed #3604671: sip uri with apostrophe is not valid (Stefan Becker)
+	- fixed HTTP redirect crash (Stefan Becker)
+	- unified Single Sign-On handling in all places (Stefan Becker)
+	  * if SSO is enabled then "Login" & "Password" settings are ignored
+	  * SSO is now off by default for new accounts
+	  * NOTE: if you do *NOT* use SSO, then be sure to disable it in the
+	          "Advanced" tab of the account settings after updating!
+	- added implementation for HTTP "WWW-Authenticate: Negotiate" scheme (Stefan Becker)
+	  * effective for all platforms that support --with-krb5
+	  * it will try Kerberos first, then fall back to NTLM
+	  * valid Kerberos Single Sign-On setup will be detected automatically
+	  * setup for a mixed Kerberos/NTLM HTTP environment:
+	    - login name:     DOMAIN\account
+	    - password:       domain password
+	    - authentication: Kerberos
+	    - Single Sign-On: OFF(!)          (see above)
+	- enabled TLS-DSK support in Windows SSPI version
+	- TLS-DSK: don't ask for password if SSPI or Kerberos are compiled in
+	- Farstream 0.1.1 compatibility fix (Jakub Adam)
+	- support conf:sip: meeting URIs (Jakub Adam)
+	- updated Adium port (Michael Lamb)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sat, 09 Mar 2013 15:25:00 +0200
+
+pidgin-sipe (1.14.1-1) unstable; urgency=low
+
+  * New upstream version version 1.14.1 "Bug Fixes I"
+	- Feature #3578132: Kerberos configuration should be passwordless (Stefan Becker)
+	  * purple: non Single Sign-on users are asked for the password again
+	- bug & memory leak fixes in sipe-buddy.c (Jakub Adam)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Wed, 26 Dec 2012 16:23:00 +0200
+
+pidgin-sipe (1.14.0-1) unstable; urgency=low
+
+  * New upstream version 1.14.0 "Buddy photo & ADFS support, Web Ticket Optimizations"
+	- Feature #3585364: Add support for Web Ticket authentication using ADFS (Stefan Becker)
+	  * special thanks to user bhakta79 for the hard work taking logs
+	- Feature #3578132: Kerberos configuration should be passwordless (Stefan Becker)
+	- Fixed #3580212: Connection drops after a few hours (Stefan Becker)
+        - add support for buddy photos (Jakub Adam)
+	- add support for call to Audio Test Service (Jakub Adam)
+	- initial implementation for telepathy backend (Stefan Becker)
+	  * nothing much to see for end users yet...
+	- reduce Web Ticket traffic by queueing requests & caching tickets (Stefan Becker)
+	- update OBS packaging information for Debian (Stefan Becker)
+        - various minor bug & build fixes
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 16 Dec 2012 16:28:00 +0200
+
+pidgin-sipe (1.13.3-1) unstable; urgency=low
+
+  * New upstream version 1.13.3 "Bug Fixes III" (2012-08-19)
+	- Fixed #3537084: OpenBSD build issue (Stefan Becker)
+	- Fixed #3543294: Support Lync 2010 meet URLs (Jakub Adam)
+	- revert to legacy MSOC protocol on Lync FT invitation (Jakub Adam)
+	- fix broken busy->available status switch (Stefan Becker)
+	- updated translations: Portuguese (pt)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 19 Aug 2012 12:03:00 +0300
+
+pidgin-sipe (1.13.2-1) unstable; urgency=low
+
+  * New upstream version 1.13.2 "Bug Fixes II" (2012-06-10)
+	- tls: fix buffer overrun (Oleksandr Hryshchuk, Stefan Becker)
+	- win32: fix TCP connections (Stefan Becker)
+	- nsis: fix broken locale installation (Stefan Becker)
+	- updated translations: French (fr)
+	- various build fixes (Stefan Becker, Jakub Adam)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Sun, 10 Jun 2012 15:48:00 +0300
+
+pidgin-sipe (1.13.1-1) unstable; urgency=low
+
+  * New upstream version 1.13.1 "Bug Fixes I"
+	- detect incompatible encryption level with Lync (Jakub Adam)
+	- purple: add URI validity check to Add Buddy callback (Stefan Becker)
+	- new translations: Romanian (ro), Turkish (tr)
+	- various build fixes (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Mon, 09 Apr 2012 12:29:42 +0300
+
+pidgin-sipe (1.13.0-1) unstable; urgency=low
+
+  * New upstream version 1.13.0 "Lync & Office365"
+	- added [MS-SIPAE] TLS-DSK authentication scheme (Stefan Becker)
+	  * TLS-DSK has been introduced in Lync
+	  * mandatory for Office365 accounts
+	  * also works for non-public Lync installations
+	  * does not work yet with SSPI on Windows
+	- added [MS-DLX] based Get Info/Contact Search (Stefan Becker)
+	  * [MS-PRES] SIP-Based Active Directory Search is disabled in Lync
+	- added experimental media TCP transport (Jakub Adam)
+	- make it compile against the latest purple 3.0.x API (Stefan Becker)
+	- make it compile against the latest glib2 2.31.x API (Stefan Becker)
+	- completed cleanup: core no longer requires libpurple (Stefan Becker)
+	- refactored crypto code, ie. NSS can replaced if necessary (Stefan Becker)
+	- sipe-domino.c is no longer built under UNIX to remove dead code (Stefan Becker)
+	- restricted XXX_CFLAGS to modules that need them (Stefan Becker)
+	- NSS is now a mandatory build requirement (Stefan Becker)
+	- decoupled SSPI from HAVE_LIBKRB5 flag. New flag is HAVE_SSPI (Stefan Becker)
+	- OBS mingw packages now use SSPI instead of NTLM (Stefan Becker)
+	- added NSIS package generation to OBS mingw packages (Stefan Becker)
+	- removed kopete backend. KDE is moving to telepathy (Stefan Becker)
+	- added MinGW cross-compilation on Linux instructions (Stefan Becker)
+
+ -- Stefan Becker <chemobejk@gmail.com>  Wed, 14 Mar 2012 19:30:23 +0200
+
+pidgin-sipe (1.12.0-1) unstable; urgency=low
+
+  * New upstream version 1.12.0 "Group Chat"
+	- Feature #3064877: Add support for OCS2007R2 Group Chat (Stefan Becker)
+	- Feature #3311026: Support for HTTP/1.1 Transfer-Encoding: chunked (Stefan Becker)
+	- Fixed #2834758: First NTLM signature check after startup fails (Stefan Becker) 
+	- Fixed #3082602: Crash on Autodiscover (Stefan Becker)
+	- Fixed #3090663: Re-authentication fails (Stefan Becker)
+	- Fixed #3092324: Core dump in "make check" (psfales)
+	- Fixed #3130915: Failed to authenticate to server (Stefan Becker)
+	- Fixed #3148124: sipe segfaults during login on Solaris (Jakub Adam)
+	- Fixed #3150482: "configure --with-vv" test uses wrong include (Stefan Becker)
+	- Fixed #3156430: Messages not Delivered (rwinchsf, Stefan Becker)
+	- Fixed #3161273: Lost Connection Gives No Error Message (rwinchsf, Stefan Becker)
+	- Fixed #3198585: Extra line breaks (Stefan Becker)
+	- Fixed #3267073: False "could not be delivered" errors (sort of..., Stefan Becker)
+	- Fixed #3399007: Crash when sipe_cal_working_hours->days_of_week is NULL (Stefan Becker)
+	- Patch #3091490: Make 1.11.0 Compile on FreeBSD (jprather)
+	- Patch #3108246: Patch for better windows installer (archrival, galiven)
+	- add random Ms-Conversation-ID to INVITE (Jakub Adam)
+	- fix parsing of P-Asserted-Identity header (Jakub Adam)
+	- added MS TURN support (Jakub Adam)
+	- fix crash on zero length password in NTLM (Vladimir Ushakov)
+	- implement timeouts for SIP request. Used for REGISTER (Stefan Becker)
+	- more work on Voice & Video call support (Jakub Adam)
+        - make it compile against the purple 2.8.x & 3.0.x APIs (Stefan Becker)
+	- more internal changes to prepare for non-purple backends (Stefan Becker)
+	- added integration for transifex.net update (Stefan Becker)
+	- configure improvements for 64-bit: use libdir, gsize/size_t compatibility (Stefan Becker)
+	- update compiler warnings configuration for all build platforms (Stefan Becker)
+	- updated Adium port (Matthew Duggan)
+	- mingw build updates (Harris P. Kauffman, Stefan Becker)
+	- added miranda port (Jochen De Smet)
+	- added mingw to OpenSUSE Build Service configuration (Stefan Becker)
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Mon, 29 Aug 2011 00:50:47 -0500
+
+pidgin-sipe (1.11.2-1) unstable; urgency=low
+
+  * New upstream version 1.11.2 "Hot fixes II"
+        - Revert "mingw: add missing purple-notify.c to build"
+        - Sipe-sign: fix parsing of P-Asserted-Identity header
+        - Fixed memory leaks
+        - Fix #3090663: Re-authentication fails
+        - Fix #3090663: Re-authentication fails (2nd attempt)
+        - Fix #3090663: Re-authentication fails (3rd attempt)
+        - Fix #3090663: Re-authentication fails (4th attempt)
+        - Apply patch #3091490: Make 1.11.0 Compile on FreeBSD
+        - Fix #3092324: Core dump in "make check"
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Tue, 02 Nov 2010 23:48:33 -0600
+
+pidgin-sipe (1.11.1-1) unstable; urgency=low
+
+  * New upstream version 1.11.1 "Hot fixes"
+        - mingw: add missing purple-notify.c to build
+        - Fix for bug #2834758: First NTLM signature check after startup fails
+        - purple: fix memory leak in sipe_backend_transport_connect() error path
+        - Fix for bug #3082602: Crash on Autodiscover
+        - configure: use libdir & datadir instead of prefix + path
+        - configure: update 32-bit vs. 64-bit header conflict test
+        - debian: build stability fix in post-install
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 24 Oct 2010 00:00:00 +0300
+
+pidgin-sipe (1.11.0-1) unstable; urgency=low
+
+  * New upstream version
+        - Feature #2945346: Lotus Notes/Domino Calendar integration:
+          * Sipe can now retrieve calendar data (Meeting schedule/subject/
+            location) from a web-enabled Lotus Domino server and publish it to
+            OCS2007/LCS2005 as availability information.
+          * Example: "Calendar: Currently Busy. Free at 11:30".
+          * Team members (contacts with access level Team) will be able to see
+            information about our current meeting (subject & location) (OCS2007)
+          * First calendar update is scheduled 1 minute after connect,
+          * Subsequent calendar updates happen in 30 minute intervals.
+          * Manual calendar update can be triggered using the following menu:
+                   Accounts->{SIPE_ACCOUNT}->"Republish Calendar"
+          * Though Domino integration can work without any additional settings 
+            in account configuration (on Windows), there are options to manually
+            provide Domino Services URL and email address/password if it's
+            different from SIP URI/Password settings on Basic tab.
+        - Fixed #2971422: idle check for OCS2005 presence case
+        - Fixed #2982424: krb5 build errors on FreeBSD
+        - Fixed #2997639: pidgin crash after accepting cert
+        - Fixed #3001523: Cancelling a long pending file transfer crashes Pidgin
+        - Fixed #3002993: Group Name issues with ampersand
+        - Fixed #3029228: Calendar published at/with incorrect time
+        - Fixed #3029929: Crash with outlook 2k3 Calendar
+        - Fix logout from OCS
+        - Implement workaround for buddy list menu memory leaks
+        - Dropped UDP transport support
+        - Rewrote TCP & TLS transport support
+        - HTTP improvements: GET, cookies
+        - Alternative crypt/digest implementation based on NSS
+        - Rewrote message debug log and implemented an analyzer script for it
+        - More internal changes to prepare for non-purple backends
+        - New translations: 'nl', 'sv', 'ar', 'hu', 'ja', 'ko', 'sv', 'zh_TW'
+  * Fixed pidgin-sipe: Kerberos authentication is broken (Closes: #597437)
+  * Fixed pidgin-sipe: no dependency on pidgin (Closes: #594882)
+  * Fixed pidgin-sipe: new upstream version is available (Closes: #596799)
+  * Fixed pidgin-sipe: FTBFS: sipe.c:10050: error: missing initializer 
+    (Closes: #582998)
+  * Added dependency with the libxml2-dev package in debian/control
+  * Added dependency with libnss3-dev package in debian/control
+  * Updated with Standards-Version 3.9.1
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 03 Oct 2010 22:05:31 +0300
+
+pidgin-sipe (1.10.1-1) unstable; urgency=low
+
+  * New upstream version
+        - Fix broken sipe_ht_equals_nick(); the broken code has been in the 
+          1.10.0 release. As it affects the buddy list it could be the root 
+          cause for some of the "buddy appears offline" reports.
+        - Make it compile against the final purple 2.7.0 API;
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 27 Jun 2010 11:46:59 -0600
+
+pidgin-sipe (1.10.0-1) unstable; urgency=low
+
+  * New upstream version
+      - Feature #2823160: Access Levels (2007+ environment)
+      - Feature #2957811: add support for "automaton" class
+      - Feature #2972823: fail on in-line variable declarations
+      - Fixed #2971422: handle OCS 2005 idiosyncrasy of varying SIP URI case
+      - Fixed #2981563: Authentication protocol v4 - invalid signature of some 
+        incoming messages containing P-Asserted-Identity or P-Preferred-Identity
+        with uppercased SIP or TEL in URI.
+      - Fixed publication/"409 Conflict" endless looping
+      - Prepare for Pidgin 2.7.0
+      - Added SVG icon artwork
+      - Many changes to configure script. Be sure to look at "configure --help"
+      - Many internal changes to prepare for non-purple backends
+      - New build requirements: libxml2, glib-2.0 >= 2.12.0
+      - New build option: gmime-2.4 >= 2.4.16 or gmime-2.6 >= 2.5.2 for 
+        non-purple backends
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 04 Apr 2010 00:52:59 -0600
+
+pidgin-sipe (1.9.1-1) unstable; urgency=low
+  * New upstream version (emergency release)
+      - Fixed #2969327: Kerberos authentication always fails on *nix platforms
+      - Fixed #2968287: Authentication failure in scenario when director server
+        is Office Communications Server 2007 or above and home server is 
+        Live Communications Server 2005
+      - Send BYE when response to IM message is 408/480/481
+      - Re-enable offline status to be user settable
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Tue, 16 Mar 2010 02:13:59 -0600
+
+pidgin-sipe (1.9.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #570735)
+    * File transfer functionality. File encryption is supported
+    * NTLMv2 and NTLMv2 Session Security support
+    * Implemented SIP Authentication Extensions protocol version 4 and 3
+    * Adoption for commercial UNIX - HP/UX, Irix, Solaris - big endian fixes
+    * Increased libpurple build requisite to >= 2.4.0 
+    * many crash fixes for error or corner cases in calendar integration
+    * more detailed code analysis with Coverity Prevent
+    * build fixes for older libpurple/glib2 versions
+    * OpenSUSE Build Service configuration files
+    * Fix NTLM crash if login setting is undefined
+    * Use of g_str_has_prefix() available since glib 2.2 and null-safe
+    * build fixes for older OS releases, e.g. Ubuntu older than 9.10.
+  * Removed the file libsipe.la from the package
+  * Removed the line dh_pidgin -ppidgin-sipe from debian/rules 
+  * Added ./autogen.sh could be run from debian/rules
+  * Changed the Section from net to misc inside Source stanza in debian/control
+  * Changed the Section from net to misc inside Package stanza in debian/control
+  * Added the Priority header inside Package stanza in debian/control
+  * Updated the Description inside Package stanza in debian/control
+  * Updated the debian/copyright file with the new authors list.
+  * Updated the debian/copyright file with the correct PATH to license GPL2.
+  * Removed dependency with the libgtk2.0-dev package in debian/control
+  * Removed dependency with the comerr-dev package in debian/control
+  * Removed debian/README.debian file from the package
+  * Added dependency with the libzephyr-dev package in debian/control
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Wed, 10 Mar 2010 01:05:59 -0600
+
+pidgin-sipe (1.8.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #536100)
+    * Simplifying the authentication process using only the Basic Settings
+      screen.
+    * Added integration with Exchange 2007/2010
+    * Added Windows Messenger 5.0 (RTC/1.2) compatibility.
+    * "About SIPE plugin" screen implemented.
+    * Added Kerberos support.
+    * Added Multiparty Chat support.
+    * Fixed many bugs.
+    * Fixed many potencial memory leaks.
+    * Fixed support for LCS2005 and OCS2007 (improvementsi and bugs fixed)
+    * Added "Find on LinkedIn" link on contact's User Info screen
+    * Updated translations: "de", "pl", "ru", "cs", "da", "es", "fi", "fr, "hi",
+      "it", "nb", "ta", "zh_CN".
+    * Fixed for server auto-discovery 
+    * Fixed for User Agent string.  
+    * Added integration with PBX (external phones) using CSTA protocol
+    * Fixed for CHOWA problems
+    * Fixed for spaces in Login's username 
+    * Support for Reuters Messaging environment
+    * Support for message formatting
+    * Added notification support for undelivered messages
+    * Extended contact search implementation
+    * ... and more
+  * Fixed pidgin-sipe: urls appear w/ underscore prefix (Closes: #529523)
+  * Updated the debian/copyright file with the new authors list.
+  * Added DEB_CONFIGURE_EXTRA_FLAGS in debian/rules for extra compile flags
+  * Added dependency with the libkrb5-dev package
+  * Removed to delete the file libsipe.la from debian/rules.
+  * Removed DEB_AUTO_UPDATE_DEBIAN_CONTROL reference from debian/rules.
+  * Updated with Standards-Version 3.8.4
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 07 Feb 2010 04:48:35 -0500
+
+pidgin-sipe (1.3.3-1) unstable; urgency=low
+
+  * New upstream version (Closes: #508221)
+    * Added support for OCS 2007, LCS 2003
+    * Full support for send/receive messages
+    * Full presence support (both sides)
+    * Full support for add/remove/move contacts
+    * TLS/SSL support
+    * Search contacts full support
+    * xBSD support
+  * Added the dependency with the libpurple-dev package
+  * Added the dependency with the intltool package
+  * Added the dependency with the comerr-dev package
+  * Removed the unnecessary debian/pidgin-sipe.dirs file
+  * Changed the package description inside debian/control 
+    (Closes: #433920,#490923)
+  * Added the field Homepage inside Source stanza in debian/control file.
+  * Updated the debian/copyright file with the new authors list.
+  * Updated with Standards-Version 3.8.0
+
+ -- Anibal Avelar <aavelar@cofradia.org>  Sun, 1 Mar 2009 12:15:35 -0500
+
+pidgin-sipe (1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #418226)
+
+ -- Anibal Avelar (Fixxxer) <aavelar@cofradia.org>  Wed, 13 Jun 2007 19:12:35 -0500
+

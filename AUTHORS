@@ -1,0 +1,45 @@
+Maintainers:
+
+Stefan Becker <chemobejk at gmail dot com>
+Jakub Adam <jakub dot adam at ktknet dot cz>
+
+Retired Maintainers:
+
+Jochen De Smet <jochen dot siplcs at leahnim dot org> (Miranda port)
+Michael Lamb <mlamb1976 at yahoo dot com> (Adium port)
+Anibal Avelar <debianmx at gmail dot com>
+Tomáš Hrabčík <tomas dot hrabcik at tieto dot com>
+pier11 <pier11 at operamail dot com>
+Gabriel Burt  <gburt at novell dot com>
+Daniel Beichl <daniel_beichl at gmx dot net>
+
+Other Contributors:
+
+Jakub 'jimmac' Steiner <jimmac at gmail dot com> (icon artwork)
+Harris Kauffman <harris dot kauffman at gmail dot com> (Adium port)
+Matt Meissner <meissnem at gmail dot com> (Adium port)
+Michael Steffens <michael_steffens at gmx dot net>
+Carl Seutter <cseutter at sbcglobal dot net>
+Sean E. Millichamp <sean at bruenor dot org>
+Andrew Rechenberg <therealdjflux at gmail dot com>
+Matthias Scharrer <matthias dot scharrer at gmail dot com>
+Garett Shulman <garett dot shulman at gmail dot com>
+Tyson Vinson <lornoss at gmail dot com>
+Andrew Schenck <lane_andrew at hotmail dot com>
+Ivan Frade <ivan at kustu at (none)>
+Jay (Rhyas) <biteme at scream at com>
+John Beranek <john at redux dot org dot uk>
+David Woodhouse <David dot Woodhouse at intel dot com>
+Edmondas Girkantas <eg at fbsd dot lt>
+Peter Fales
+Kyle Hubert <khubert at lottle dot net>
+Andrey Vaynberger <platerx at gmail dot com>
+Michael Olbrich <m dot olbrich at pengutronix dot de>
+
+Based on the initial SIP/SIMPLE gaim protocol plugin by:
+
+Thomas Butter <butter at uni-mannheim dot de>
+
+Translators:
+
+Please check the "Translators:" section in the po/*.po files.
